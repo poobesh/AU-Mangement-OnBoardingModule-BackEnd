@@ -15,15 +15,22 @@ public class Employee {
 	String permanent_address;
 	int P_pincode;
 	String pan_number;
-	int skill_id;
+	String skill_1;
+	String skill_2;
+	String skill_3;
+	boolean status;
 	int experience;
 	long phone_number;
 	String current_address;
 	int C_pincode;
 	boolean BGC;
 	String designation;
+	int demand_id;
 	long bank_ac_no;
-	String demand_id;
+	String ifsc_code;
+	String name;
+	String branch;
+	
 	
 	public Employee() {
 		super();
@@ -104,12 +111,7 @@ public class Employee {
 	public void setPan_number(String pan_number) {
 		this.pan_number = pan_number;
 	}
-	public int getSkill_id() {
-		return skill_id;
-	}
-	public void setSkill_id(int skill_id) {
-		this.skill_id = skill_id;
-	}
+	
 	public int getExperience() {
 		return experience;
 	}
@@ -152,25 +154,98 @@ public class Employee {
 	public void setBank_ac_no(long bank_ac_no) {
 		this.bank_ac_no = bank_ac_no;
 	}
-	public String getDemand_id() {
+	public int getDemand_id() {
 		return demand_id;
 	}
-	public void setDemand_id(String demand_id) {
+	public void setDemand_id(int demand_id) {
 		this.demand_id = demand_id;
 	}
 
 
 
-	@Override
-	public String toString() {
-		return "Employee [id=" + id + ", email=" + email + ", version=" + version + ", first_name=" + first_name
-				+ ", last_name=" + last_name + ", dob=" + dob + ", blood_type=" + blood_type + ", gender=" + gender
-				+ ", date_of_joining=" + date_of_joining + ", permanent_address=" + permanent_address + ", P_pincode="
-				+ P_pincode + ", pan_number=" + pan_number + ", skill_id=" + skill_id + ", experience=" + experience
-				+ ", phone_number=" + phone_number + ", current_address=" + current_address + ", C_pincode=" + C_pincode
-				+ ", BGC=" + BGC + ", designation=" + designation + ", bank_ac_no=" + bank_ac_no + ", demand_id="
-				+ demand_id + "]";
+	public String getSkill_1() {
+		return skill_1;
 	}
+
+
+
+	public void setSkill_1(String skill_1) {
+		this.skill_1 = skill_1;
+	}
+
+
+
+	public String getSkill_2() {
+		return skill_2;
+	}
+
+
+
+	public void setSkill_2(String skill_2) {
+		this.skill_2 = skill_2;
+	}
+
+
+
+	public String getSkill_3() {
+		return skill_3;
+	}
+
+
+
+	public void setSkill_3(String skill_3) {
+		this.skill_3 = skill_3;
+	}
+
+
+
+	public boolean isStatus() {
+		return status;
+	}
+
+
+
+	public void setStatus(boolean status) {
+		this.status = status;
+	}
+
+
+
+	public String getIfsc_code() {
+		return ifsc_code;
+	}
+
+
+
+	public void setIfsc_code(String ifsc_code) {
+		this.ifsc_code = ifsc_code;
+	}
+
+
+
+	public String getName() {
+		return name;
+	}
+
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+
+	public String getBranch() {
+		return branch;
+	}
+
+
+
+	public void setBranch(String branch) {
+		this.branch = branch;
+	}
+	
+
 	
 	
 
