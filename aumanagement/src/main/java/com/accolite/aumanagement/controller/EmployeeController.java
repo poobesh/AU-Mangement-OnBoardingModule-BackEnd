@@ -31,7 +31,7 @@ public class EmployeeController {
 		List<Employee> employees; 
 		try {
 			logger.info("Request to display employees is received ");
-			employees= service.getRequest();
+			employees= service.getRequest();							// get request 
 			logger.info("Request to display employees is processed successfully");
 		}
 		catch(Exception e) {
@@ -47,7 +47,7 @@ public class EmployeeController {
 		Employee employee = null ;
 		try {
 			logger.info("Request to display Employee with id "+id+" has been received ");
-			employee = service.getRequest(Integer.valueOf(id));
+			employee = service.getRequest(Integer.valueOf(id));									// Get Request by Id 
 			logger.info("Request to display Employee with id "+id+" has been succesfully processed ");
 		}
 		catch (Exception e)
@@ -63,7 +63,7 @@ public class EmployeeController {
 		 //System.out.println(t.toString());
 		 try {
 			 logger.info("Request to add Employee with id "+t.getId()+" has been received ");
-			 service.postRequest(t); 
+			 service.postRequest(t);														// Post Request with Employee Details
 			 logger.info("Request to add Employee with id "+t.getId()+" has been succesfully completed ");
 			 return "Successfully Posted"+t.getId();
 		 }
@@ -80,7 +80,7 @@ public class EmployeeController {
 		System.out.println(t.toString());
 		try {
 			logger.info("Request to update Employee with id "+t.getId()+" has been received ");
-			service.putRequest(id,t);
+			service.putRequest(id,t);														// Put Request with id ,Employee Details
 			logger.info("Request to update Employee with id "+t.getId()+" has been processed succesfully ");
 			return "Succesfully Updated"+id;
 		}
@@ -96,7 +96,7 @@ public class EmployeeController {
 	public String deleteEmployee(@PathVariable String id){
 		 try{
 			 logger.info("Request to delete Employee with id "+id+" has been received ");
-			 service.deleteRequest(id);
+			 service.deleteRequest(id);													// Delete Request with id
 			 logger.info("Request to delete Employee with id "+id+" has been completed successfully ");
 			 return "Successfully Deleted id = "+id;
 		 }

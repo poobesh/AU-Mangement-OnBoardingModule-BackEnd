@@ -13,6 +13,10 @@ import com.accolite.aumanagement.model.EmployeeRowMapper;
 import java.util.NoSuchElementException;
 import com.accolite.aumanagement.exception.*;
 
+/**
+ * @author Sathish-PC
+ *
+ */
 @Repository
 public class EmployeeDaoImpl implements EmployeeDao{
 	
@@ -72,7 +76,7 @@ public class EmployeeDaoImpl implements EmployeeDao{
 		String query4 = "INSERT INTO `skill`(`pan_number`, `skill_1`, `skill_2`, `skill_3`) VALUES (? , ? ,? , ? )";
 		template.update(query4, employee.getPan_number(),employee.getSkill_1(),employee.getSkill_2(),employee.getSkill_3());
 		
-		System.out.println("Employee Updated : "+employee.toString());
+		
 		}
 		catch(Exception e)
 		{
@@ -100,8 +104,10 @@ public class EmployeeDaoImpl implements EmployeeDao{
 			String query = "SELECT version FROM employee WHERE id = ?";
 			int version = template.queryForObject(query, new Object[] {id}, Integer.class);
 			version++;
+			
 			String query1 = "SELECT email FROM employee WHERE id = ?";
 			String email = template.queryForObject(query1, new Object[] {id}, String.class);
+			
 			String query2 = "UPDATE `employee_constant` SET `version`= ? WHERE `id` = ?" ;
 			template.update(query2, version , id);
 			
@@ -120,6 +126,13 @@ public class EmployeeDaoImpl implements EmployeeDao{
 		
 	}
 
+	
+	/* (non-Javadoc)
+	 * @see com.accolite.aumanagement.dao.EmployeeDao#deleteEmployee(int)
+	 * 
+	 * Deleting only the Employee Primary Details .
+	 * Secondary Details are still available after deleting
+	 */
 	@Override
 	public void deleteEmployee(int id) {
 		try {
