@@ -1,475 +1,76 @@
-2020-06-02 00:00:19.924  INFO 3292 --- [restartedMain] c.a.a.AuManagementApplication            : Starting AuManagementApplication on SATHISH with PID 3292 (D:\Project\Final\BackEnd\AU-Mangement-OnBoardingModule-BackEnd\aumanagement\target\classes started by Sathish-PC in D:\Project\Final\BackEnd\AU-Mangement-OnBoardingModule-BackEnd\aumanagement)
-2020-06-02 00:00:19.953  INFO 3292 --- [restartedMain] c.a.a.AuManagementApplication            : No active profile set, falling back to default profiles: default
-2020-06-02 00:00:20.522  INFO 3292 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2020-06-02 00:00:20.522  INFO 3292 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2020-06-02 00:00:24.637  INFO 3292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2020-06-02 00:00:24.737  INFO 3292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 79ms. Found 0 JDBC repository interfaces.
-2020-06-02 00:00:28.531  INFO 3292 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-06-02 00:00:28.609  INFO 3292 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-06-02 00:00:28.609  INFO 3292 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
-2020-06-02 00:00:30.180  INFO 3292 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-06-02 00:00:30.180  INFO 3292 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 9658 ms
-2020-06-02 00:00:32.781  INFO 3292 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-06-02 00:00:33.902  INFO 3292 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-06-02 00:00:33.904  WARN 3292 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
-2020-06-02 00:00:34.560  INFO 3292 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-06-02 00:00:34.915  INFO 3292 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2020-06-02 00:00:34.927  INFO 3292 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
-2020-06-02 00:00:35.179  INFO 3292 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-06-02 00:00:35.246  INFO 3292 --- [restartedMain] c.a.a.AuManagementApplication            : Started AuManagementApplication in 18.905 seconds (JVM running for 24.874)
-2020-06-02 00:00:35.560  INFO 3292 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-06-02 00:00:35.561  INFO 3292 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-06-02 00:00:35.576  INFO 3292 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
-2020-06-02 00:00:35.869  INFO 3292 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to display employees is received 
-2020-06-02 00:00:35.970  INFO 3292 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
-2020-06-02 00:10:06.280  INFO 3292 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to display employees is received 
-2020-06-02 00:10:08.295  INFO 3292 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
-2020-06-02 00:10:33.091  INFO 3292 --- [http-nio-8080-exec-8] c.a.a.AuManagementApplication            : Request to display employees is received 
-2020-06-02 00:10:33.109  INFO 3292 --- [http-nio-8080-exec-8] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
-2020-06-02 00:13:27.463  INFO 3292 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to add Employee with id 2 has been received 
-2020-06-02 00:13:28.057  INFO 3292 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to add Employee with id 2 has been succesfully completed 
-2020-06-02 00:13:52.104  INFO 3292 --- [http-nio-8080-exec-6] c.a.a.AuManagementApplication            : Request to display employees is received 
-2020-06-02 00:13:52.112  INFO 3292 --- [http-nio-8080-exec-6] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
-2020-06-02 00:14:01.319  INFO 3292 --- [http-nio-8080-exec-3] c.a.a.AuManagementApplication            : Request to display Employee with id 2 has been received 
-2020-06-02 00:14:05.440  INFO 3292 --- [http-nio-8080-exec-3] c.a.a.AuManagementApplication            : Request to display Employee with id 2 has been succesfully processed 
-2020-06-02 00:14:37.911  INFO 3292 --- [http-nio-8080-exec-8] c.a.a.AuManagementApplication            : Request to update Employee with id 2 has been received 
-2020-06-02 00:14:38.153  INFO 3292 --- [http-nio-8080-exec-8] c.a.a.AuManagementApplication            : Request to update Employee with id 2 has been processed succesfully 
-2020-06-02 00:14:41.948  INFO 3292 --- [http-nio-8080-exec-10] c.a.a.AuManagementApplication            : Request to display employees is received 
-2020-06-02 00:14:41.999  INFO 3292 --- [http-nio-8080-exec-10] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
-2020-06-02 00:14:46.932  INFO 3292 --- [http-nio-8080-exec-2] c.a.a.AuManagementApplication            : Request to display Employee with id 2 has been received 
-2020-06-02 00:14:46.978  INFO 3292 --- [http-nio-8080-exec-2] c.a.a.AuManagementApplication            : Request to display Employee with id 2 has been succesfully processed 
-2020-06-02 00:14:57.372  INFO 3292 --- [http-nio-8080-exec-4] c.a.a.AuManagementApplication            : Request to display employees is received 
-2020-06-02 00:14:57.413  INFO 3292 --- [http-nio-8080-exec-4] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
-2020-06-02 00:15:02.920  INFO 3292 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to delete Employee with id 2 has been received 
-2020-06-02 00:15:03.000  INFO 3292 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to delete Employee with id 2 has been completed successfully 
-2020-06-02 00:15:09.989  INFO 3292 --- [http-nio-8080-exec-9] c.a.a.AuManagementApplication            : Request to display employees is received 
-2020-06-02 00:15:10.012  INFO 3292 --- [http-nio-8080-exec-9] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
-2020-06-02 00:18:00.103  INFO 3292 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to display employees is received 
-2020-06-02 00:18:00.124  INFO 3292 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
-2020-06-02 00:18:30.013  INFO 3292 --- [http-nio-8080-exec-6] c.a.a.AuManagementApplication            : Request to display employees is received 
-2020-06-02 00:18:30.020  INFO 3292 --- [http-nio-8080-exec-6] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
-2020-06-02 00:18:40.756  INFO 3292 --- [http-nio-8080-exec-3] c.a.a.AuManagementApplication            : Request to display employees is received 
-2020-06-02 00:18:40.792  INFO 3292 --- [http-nio-8080-exec-3] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
-2020-06-02 00:18:54.413  INFO 3292 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to display employees is received 
-2020-06-02 00:18:54.421  INFO 3292 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
-2020-06-02 00:19:05.556  INFO 3292 --- [http-nio-8080-exec-9] c.a.a.AuManagementApplication            : Request to display Employee with id 1 has been received 
-2020-06-02 00:19:05.689  INFO 3292 --- [http-nio-8080-exec-9] c.a.a.AuManagementApplication            : Request to display Employee with id 1 has been succesfully processed 
-2020-06-02 00:20:37.730  INFO 3292 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to display employees is received 
-2020-06-02 00:20:37.788  INFO 3292 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
-2020-06-02 00:20:37.877  INFO 3292 --- [http-nio-8080-exec-2] c.a.a.AuManagementApplication            : Request to display employees is received 
-2020-06-02 00:20:37.883  INFO 3292 --- [http-nio-8080-exec-2] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
-2020-06-02 00:20:44.286  INFO 3292 --- [http-nio-8080-exec-3] c.a.a.AuManagementApplication            : Request to display employees is received 
-2020-06-02 00:20:44.297  INFO 3292 --- [http-nio-8080-exec-3] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
-2020-06-02 00:21:04.928  INFO 3292 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to display employees is received 
-2020-06-02 00:21:04.977  INFO 3292 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
-2020-06-02 00:21:10.695  INFO 3292 --- [http-nio-8080-exec-9] c.a.a.AuManagementApplication            : Request to display Employee with id 1 has been received 
-2020-06-02 00:21:11.998  INFO 3292 --- [http-nio-8080-exec-9] c.a.a.AuManagementApplication            : Request to display Employee with id 1 has been succesfully processed 
-2020-06-02 00:28:28.621  INFO 2312 --- [restartedMain] c.a.a.AuManagementApplication            : Starting AuManagementApplication on SATHISH with PID 2312 (D:\Project\Final\BackEnd\AU-Mangement-OnBoardingModule-BackEnd\aumanagement\target\classes started by Sathish-PC in D:\Project\Final\BackEnd\AU-Mangement-OnBoardingModule-BackEnd\aumanagement)
-2020-06-02 00:28:28.652  INFO 2312 --- [restartedMain] c.a.a.AuManagementApplication            : No active profile set, falling back to default profiles: default
-2020-06-02 00:28:29.017  INFO 2312 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2020-06-02 00:28:29.018  INFO 2312 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2020-06-02 00:28:47.806  INFO 2312 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2020-06-02 00:28:48.103  INFO 2312 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 214ms. Found 0 JDBC repository interfaces.
-2020-06-02 00:29:14.700  INFO 2312 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-06-02 00:29:16.412  INFO 2312 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-06-02 00:29:16.413  INFO 2312 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
-2020-06-02 00:29:21.513  INFO 2312 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-06-02 00:29:21.514  INFO 2312 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 52495 ms
-2020-06-02 00:29:34.917  INFO 2312 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-06-02 00:29:42.737  INFO 2312 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-06-02 00:29:42.907  WARN 2312 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
-2020-06-02 00:29:49.124  INFO 2312 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-06-02 00:29:49.995  WARN 2312 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2020-06-02 00:29:50.011  INFO 2312 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
-2020-06-02 00:29:51.135  WARN 2312 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
-2020-06-02 00:29:51.143  WARN 2312 --- [restartedMain] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'tomcatMetricsBinder': java.lang.NullPointerException
-2020-06-02 00:29:51.145  INFO 2312 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-06-02 00:29:51.147  INFO 2312 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2020-06-02 00:29:51.545  INFO 2312 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2020-06-02 00:29:51.867  INFO 2312 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2020-06-02 00:29:52.185  INFO 2312 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2020-06-02 00:29:52.191 ERROR 2312 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Web server failed to start. Port 8080 was already in use.
-
-Action:
-
-Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
-
-2020-06-02 00:33:59.699  INFO 4756 --- [restartedMain] c.a.a.AuManagementApplication            : Starting AuManagementApplication on SATHISH with PID 4756 (D:\Project\Final\BackEnd\AU-Mangement-OnBoardingModule-BackEnd\aumanagement\target\classes started by Sathish-PC in D:\Project\Final\BackEnd\AU-Mangement-OnBoardingModule-BackEnd\aumanagement)
-2020-06-02 00:33:59.702  INFO 4756 --- [restartedMain] c.a.a.AuManagementApplication            : No active profile set, falling back to default profiles: default
-2020-06-02 00:33:59.955  INFO 4756 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2020-06-02 00:33:59.956  INFO 4756 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2020-06-02 00:34:03.064  INFO 4756 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2020-06-02 00:34:03.128  INFO 4756 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50ms. Found 0 JDBC repository interfaces.
-2020-06-02 00:34:12.823  INFO 4756 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-06-02 00:34:12.932  INFO 4756 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-06-02 00:34:12.933  INFO 4756 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
-2020-06-02 00:34:13.581  INFO 4756 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-06-02 00:34:13.583  INFO 4756 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 13626 ms
-2020-06-02 00:34:16.060  INFO 4756 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-06-02 00:34:19.241  INFO 4756 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-06-02 00:34:19.548  WARN 4756 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
-2020-06-02 00:34:25.348  INFO 4756 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-06-02 00:34:25.885  INFO 4756 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2020-06-02 00:34:25.901  INFO 4756 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
-2020-06-02 00:34:26.200  INFO 4756 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-06-02 00:34:26.265  INFO 4756 --- [restartedMain] c.a.a.AuManagementApplication            : Started AuManagementApplication in 28.362 seconds (JVM running for 29.952)
-2020-06-02 00:35:46.600  INFO 4756 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-06-02 00:35:46.601  INFO 4756 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-06-02 00:35:46.842  INFO 4756 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 240 ms
-2020-06-02 00:35:48.381  INFO 4756 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to display employees is received 
-2020-06-02 00:35:50.039  INFO 4756 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
-2020-06-02 11:06:56.046  INFO 4824 --- [restartedMain] c.a.a.AuManagementApplication            : Starting AuManagementApplication on SATHISH with PID 4824 (D:\Project\Final\BackEnd\AU-Mangement-OnBoardingModule-BackEnd\aumanagement\target\classes started by Sathish-PC in D:\Project\Final\BackEnd\AU-Mangement-OnBoardingModule-BackEnd\aumanagement)
-2020-06-02 11:06:56.083  INFO 4824 --- [restartedMain] c.a.a.AuManagementApplication            : No active profile set, falling back to default profiles: default
-2020-06-02 11:06:56.399  INFO 4824 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2020-06-02 11:06:56.400  INFO 4824 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2020-06-02 11:07:01.608  INFO 4824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2020-06-02 11:07:01.689  INFO 4824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51ms. Found 0 JDBC repository interfaces.
-2020-06-02 11:07:06.277  INFO 4824 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-06-02 11:07:06.357  INFO 4824 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-06-02 11:07:06.359  INFO 4824 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
-2020-06-02 11:07:06.805  INFO 4824 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-06-02 11:07:06.807  INFO 4824 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 10406 ms
-2020-06-02 11:07:08.870  INFO 4824 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-06-02 11:07:10.300  INFO 4824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-06-02 11:07:10.323  WARN 4824 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
-2020-06-02 11:07:14.328 ERROR 4824 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
-
-com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174) ~[mysql-connector-java-8.0.20.jar:8.0.20]
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64) ~[mysql-connector-java-8.0.20.jar:8.0.20]
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836) ~[mysql-connector-java-8.0.20.jar:8.0.20]
-	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456) ~[mysql-connector-java-8.0.20.jar:8.0.20]
-	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246) ~[mysql-connector-java-8.0.20.jar:8.0.20]
-	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:197) ~[mysql-connector-java-8.0.20.jar:8.0.20]
-	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-3.4.5.jar:na]
-	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:358) ~[HikariCP-3.4.5.jar:na]
-	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-3.4.5.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477) [HikariCP-3.4.5.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:560) [HikariCP-3.4.5.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) [HikariCP-3.4.5.jar:na]
-	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) [HikariCP-3.4.5.jar:na]
-	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158) [spring-jdbc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116) [spring-jdbc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79) [spring-jdbc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:324) [spring-jdbc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.data.jdbc.repository.config.DialectResolver$DefaultDialectProvider.getDialect(DialectResolver.java:102) [spring-data-jdbc-2.0.0.RELEASE.jar:2.0.0.RELEASE]
-	at org.springframework.data.jdbc.repository.config.DialectResolver.lambda$getDialect$0(DialectResolver.java:72) [spring-data-jdbc-2.0.0.RELEASE.jar:2.0.0.RELEASE]
-	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source) ~[na:1.8.0_231]
-	at java.util.ArrayList$ArrayListSpliterator.tryAdvance(Unknown Source) ~[na:1.8.0_231]
-	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source) ~[na:1.8.0_231]
-	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source) ~[na:1.8.0_231]
-	at java.util.stream.AbstractPipeline.copyInto(Unknown Source) ~[na:1.8.0_231]
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source) ~[na:1.8.0_231]
-	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source) ~[na:1.8.0_231]
-	at java.util.stream.AbstractPipeline.evaluate(Unknown Source) ~[na:1.8.0_231]
-	at java.util.stream.ReferencePipeline.findFirst(Unknown Source) ~[na:1.8.0_231]
-	at org.springframework.data.jdbc.repository.config.DialectResolver.getDialect(DialectResolver.java:74) [spring-data-jdbc-2.0.0.RELEASE.jar:2.0.0.RELEASE]
-	at org.springframework.data.jdbc.repository.config.AbstractJdbcConfiguration.jdbcDialect(AbstractJdbcConfiguration.java:144) ~[spring-data-jdbc-2.0.0.RELEASE.jar:2.0.0.RELEASE]
-	at org.springframework.boot.autoconfigure.data.jdbc.JdbcRepositoriesAutoConfiguration$SpringBootJdbcConfiguration$$EnhancerBySpringCGLIB$$ab3f7dc1.CGLIB$jdbcDialect$0(<generated>) ~[spring-boot-autoconfigure-2.3.0.RELEASE.jar:2.3.0.RELEASE]
-	at org.springframework.boot.autoconfigure.data.jdbc.JdbcRepositoriesAutoConfiguration$SpringBootJdbcConfiguration$$EnhancerBySpringCGLIB$$ab3f7dc1$$FastClassBySpringCGLIB$$1ef61e07.invoke(<generated>) ~[spring-boot-autoconfigure-2.3.0.RELEASE.jar:2.3.0.RELEASE]
-	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.boot.autoconfigure.data.jdbc.JdbcRepositoriesAutoConfiguration$SpringBootJdbcConfiguration$$EnhancerBySpringCGLIB$$ab3f7dc1.jdbcDialect(<generated>) ~[spring-boot-autoconfigure-2.3.0.RELEASE.jar:2.3.0.RELEASE]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_231]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_231]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_231]
-	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_231]
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1306) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:539) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:895) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) ~[spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) ~[spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237) ~[spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
-	at com.accolite.aumanagement.AuManagementApplication.main(AuManagementApplication.java:15) ~[classes/:na]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_231]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_231]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_231]
-	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_231]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.3.0.RELEASE.jar:2.3.0.RELEASE]
-Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_231]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_231]
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_231]
-	at java.lang.reflect.Constructor.newInstance(Unknown Source) ~[na:1.8.0_231]
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-java-8.0.20.jar:8.0.20]
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105) ~[mysql-connector-java-8.0.20.jar:8.0.20]
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151) ~[mysql-connector-java-8.0.20.jar:8.0.20]
-	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167) ~[mysql-connector-java-8.0.20.jar:8.0.20]
-	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:91) ~[mysql-connector-java-8.0.20.jar:8.0.20]
-	at com.mysql.cj.NativeSession.connect(NativeSession.java:144) ~[mysql-connector-java-8.0.20.jar:8.0.20]
-	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:956) ~[mysql-connector-java-8.0.20.jar:8.0.20]
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:826) ~[mysql-connector-java-8.0.20.jar:8.0.20]
-	... 77 common frames omitted
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_231]
-	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source) ~[na:1.8.0_231]
-	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source) ~[na:1.8.0_231]
-	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source) ~[na:1.8.0_231]
-	at java.net.AbstractPlainSocketImpl.connect(Unknown Source) ~[na:1.8.0_231]
-	at java.net.PlainSocketImpl.connect(Unknown Source) ~[na:1.8.0_231]
-	at java.net.SocksSocketImpl.connect(Unknown Source) ~[na:1.8.0_231]
-	at java.net.Socket.connect(Unknown Source) ~[na:1.8.0_231]
-	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155) ~[mysql-connector-java-8.0.20.jar:8.0.20]
-	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65) ~[mysql-connector-java-8.0.20.jar:8.0.20]
-	... 80 common frames omitted
-
-2020-06-02 11:07:14.351  WARN 4824 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jdbcConverter' defined in class path resource [org/springframework/boot/autoconfigure/data/jdbc/JdbcRepositoriesAutoConfiguration$SpringBootJdbcConfiguration.class]: Unsatisfied dependency expressed through method 'jdbcConverter' parameter 4; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jdbcDialect' defined in class path resource [org/springframework/boot/autoconfigure/data/jdbc/JdbcRepositoriesAutoConfiguration$SpringBootJdbcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.relational.core.dialect.Dialect]: Factory method 'jdbcDialect' threw exception; nested exception is org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-2020-06-02 11:07:14.354  WARN 4824 --- [restartedMain] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'tomcatMetricsBinder': java.lang.NullPointerException
-2020-06-02 11:07:14.356  INFO 4824 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-06-02 11:07:14.384  INFO 4824 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2020-06-02 11:07:14.430  INFO 4824 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2020-06-02 11:07:14.467 ERROR 4824 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jdbcConverter' defined in class path resource [org/springframework/boot/autoconfigure/data/jdbc/JdbcRepositoriesAutoConfiguration$SpringBootJdbcConfiguration.class]: Unsatisfied dependency expressed through method 'jdbcConverter' parameter 4; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jdbcDialect' defined in class path resource [org/springframework/boot/autoconfigure/data/jdbc/JdbcRepositoriesAutoConfiguration$SpringBootJdbcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.relational.core.dialect.Dialect]: Factory method 'jdbcDialect' threw exception; nested exception is org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:798) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:539) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:895) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) [spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) [spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237) [spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
-	at com.accolite.aumanagement.AuManagementApplication.main(AuManagementApplication.java:15) [classes/:na]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_231]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_231]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_231]
-	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_231]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.3.0.RELEASE.jar:2.3.0.RELEASE]
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jdbcDialect' defined in class path resource [org/springframework/boot/autoconfigure/data/jdbc/JdbcRepositoriesAutoConfiguration$SpringBootJdbcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.relational.core.dialect.Dialect]: Factory method 'jdbcDialect' threw exception; nested exception is org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:656) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1306) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	... 25 common frames omitted
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.relational.core.dialect.Dialect]: Factory method 'jdbcDialect' threw exception; nested exception is org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	... 39 common frames omitted
-Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:82) ~[spring-jdbc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:324) ~[spring-jdbc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.data.jdbc.repository.config.DialectResolver$DefaultDialectProvider.getDialect(DialectResolver.java:102) ~[spring-data-jdbc-2.0.0.RELEASE.jar:2.0.0.RELEASE]
-	at org.springframework.data.jdbc.repository.config.DialectResolver.lambda$getDialect$0(DialectResolver.java:72) ~[spring-data-jdbc-2.0.0.RELEASE.jar:2.0.0.RELEASE]
-	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source) ~[na:1.8.0_231]
-	at java.util.ArrayList$ArrayListSpliterator.tryAdvance(Unknown Source) ~[na:1.8.0_231]
-	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source) ~[na:1.8.0_231]
-	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source) ~[na:1.8.0_231]
-	at java.util.stream.AbstractPipeline.copyInto(Unknown Source) ~[na:1.8.0_231]
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source) ~[na:1.8.0_231]
-	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source) ~[na:1.8.0_231]
-	at java.util.stream.AbstractPipeline.evaluate(Unknown Source) ~[na:1.8.0_231]
-	at java.util.stream.ReferencePipeline.findFirst(Unknown Source) ~[na:1.8.0_231]
-	at org.springframework.data.jdbc.repository.config.DialectResolver.getDialect(DialectResolver.java:74) ~[spring-data-jdbc-2.0.0.RELEASE.jar:2.0.0.RELEASE]
-	at org.springframework.data.jdbc.repository.config.AbstractJdbcConfiguration.jdbcDialect(AbstractJdbcConfiguration.java:144) ~[spring-data-jdbc-2.0.0.RELEASE.jar:2.0.0.RELEASE]
-	at org.springframework.boot.autoconfigure.data.jdbc.JdbcRepositoriesAutoConfiguration$SpringBootJdbcConfiguration$$EnhancerBySpringCGLIB$$ab3f7dc1.CGLIB$jdbcDialect$0(<generated>) ~[spring-boot-autoconfigure-2.3.0.RELEASE.jar:2.3.0.RELEASE]
-	at org.springframework.boot.autoconfigure.data.jdbc.JdbcRepositoriesAutoConfiguration$SpringBootJdbcConfiguration$$EnhancerBySpringCGLIB$$ab3f7dc1$$FastClassBySpringCGLIB$$1ef61e07.invoke(<generated>) ~[spring-boot-autoconfigure-2.3.0.RELEASE.jar:2.3.0.RELEASE]
-	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.boot.autoconfigure.data.jdbc.JdbcRepositoriesAutoConfiguration$SpringBootJdbcConfiguration$$EnhancerBySpringCGLIB$$ab3f7dc1.jdbcDialect(<generated>) ~[spring-boot-autoconfigure-2.3.0.RELEASE.jar:2.3.0.RELEASE]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_231]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_231]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_231]
-	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_231]
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	... 40 common frames omitted
-Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174) ~[mysql-connector-java-8.0.20.jar:8.0.20]
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64) ~[mysql-connector-java-8.0.20.jar:8.0.20]
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836) ~[mysql-connector-java-8.0.20.jar:8.0.20]
-	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456) ~[mysql-connector-java-8.0.20.jar:8.0.20]
-	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246) ~[mysql-connector-java-8.0.20.jar:8.0.20]
-	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:197) ~[mysql-connector-java-8.0.20.jar:8.0.20]
-	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-3.4.5.jar:na]
-	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:358) ~[HikariCP-3.4.5.jar:na]
-	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-3.4.5.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477) ~[HikariCP-3.4.5.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:560) ~[HikariCP-3.4.5.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-3.4.5.jar:na]
-	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-3.4.5.jar:na]
-	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158) ~[spring-jdbc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116) ~[spring-jdbc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79) ~[spring-jdbc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	... 64 common frames omitted
-Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_231]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_231]
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_231]
-	at java.lang.reflect.Constructor.newInstance(Unknown Source) ~[na:1.8.0_231]
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-java-8.0.20.jar:8.0.20]
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105) ~[mysql-connector-java-8.0.20.jar:8.0.20]
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151) ~[mysql-connector-java-8.0.20.jar:8.0.20]
-	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167) ~[mysql-connector-java-8.0.20.jar:8.0.20]
-	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:91) ~[mysql-connector-java-8.0.20.jar:8.0.20]
-	at com.mysql.cj.NativeSession.connect(NativeSession.java:144) ~[mysql-connector-java-8.0.20.jar:8.0.20]
-	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:956) ~[mysql-connector-java-8.0.20.jar:8.0.20]
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:826) ~[mysql-connector-java-8.0.20.jar:8.0.20]
-	... 77 common frames omitted
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_231]
-	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source) ~[na:1.8.0_231]
-	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source) ~[na:1.8.0_231]
-	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source) ~[na:1.8.0_231]
-	at java.net.AbstractPlainSocketImpl.connect(Unknown Source) ~[na:1.8.0_231]
-	at java.net.PlainSocketImpl.connect(Unknown Source) ~[na:1.8.0_231]
-	at java.net.SocksSocketImpl.connect(Unknown Source) ~[na:1.8.0_231]
-	at java.net.Socket.connect(Unknown Source) ~[na:1.8.0_231]
-	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155) ~[mysql-connector-java-8.0.20.jar:8.0.20]
-	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65) ~[mysql-connector-java-8.0.20.jar:8.0.20]
-	... 80 common frames omitted
-
-2020-06-02 11:07:14.522  WARN 4824 --- [restartedMain] o.s.boot.SpringApplication               : Unable to close ApplicationContext
-
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$LiveReloadConfiguration': Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importRegistry' available
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:409) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.context.event.AbstractApplicationEventMulticaster.retrieveApplicationListeners(AbstractApplicationEventMulticaster.java:245) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.context.event.AbstractApplicationEventMulticaster.getApplicationListeners(AbstractApplicationEventMulticaster.java:197) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:134) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:403) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:360) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.boot.availability.AvailabilityChangeEvent.publish(AvailabilityChangeEvent.java:81) ~[spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
-	at org.springframework.boot.availability.AvailabilityChangeEvent.publish(AvailabilityChangeEvent.java:67) ~[spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:167) ~[spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:978) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:814) [spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:325) [spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237) [spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
-	at com.accolite.aumanagement.AuManagementApplication.main(AuManagementApplication.java:15) [classes/:na]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_231]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_231]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_231]
-	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_231]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.3.0.RELEASE.jar:2.3.0.RELEASE]
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importRegistry' available
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:409) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91) ~[spring-aop-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:109) ~[spring-aop-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:94) ~[spring-aop-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:76) ~[spring-aop-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:347) ~[spring-aop-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:299) ~[spring-aop-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:431) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	... 33 common frames omitted
-Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importRegistry' available
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:814) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1282) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:297) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor.postProcessBeforeInitialization(ConfigurationClassPostProcessor.java:456) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:416) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	... 56 common frames omitted
-
+2020-06-04 00:00:03.096  INFO 6028 --- [http-nio-8080-exec-2] c.a.a.AuManagementApplication            : Request to display Employee with id 0 has been received 
+2020-06-04 00:00:16.706  INFO 6028 --- [http-nio-8080-exec-2] c.a.a.AuManagementApplication            : Request to display Employee with id 0 has been succesfully processed 
+2020-06-04 00:00:49.199  INFO 6028 --- [http-nio-8080-exec-8] c.a.a.AuManagementApplication            : Request to display Employee with id 0 has been received 
+2020-06-04 00:00:49.391  INFO 6028 --- [http-nio-8080-exec-8] c.a.a.AuManagementApplication            : Request to display Employee with id 0 has been succesfully processed 
+2020-06-04 00:00:49.391  INFO 6028 --- [http-nio-8080-exec-4] c.a.a.AuManagementApplication            : Request to get Demands is received 
+2020-06-04 00:00:49.983  INFO 6028 --- [http-nio-8080-exec-4] c.a.a.AuManagementApplication            : Request to get Demands is processed successfully
+2020-06-04 00:01:02.116  INFO 6028 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 00:01:02.132  INFO 6028 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 00:01:05.161  INFO 6028 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to get Demands is received 
+2020-06-04 00:01:05.161  INFO 6028 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to get Demands is processed successfully
+2020-06-04 00:01:05.185  INFO 6028 --- [http-nio-8080-exec-9] c.a.a.AuManagementApplication            : Request to display Employee with id 0 has been received 
+2020-06-04 00:01:05.265  INFO 6028 --- [http-nio-8080-exec-9] c.a.a.AuManagementApplication            : Request to display Employee with id 0 has been succesfully processed 
+2020-06-04 00:01:54.259  INFO 6028 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 00:01:54.323  INFO 6028 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 00:01:59.960  INFO 6028 --- [http-nio-8080-exec-4] c.a.a.AuManagementApplication            : Request to get Demands is received 
+2020-06-04 00:01:59.968  INFO 6028 --- [http-nio-8080-exec-4] c.a.a.AuManagementApplication            : Request to get Demands is processed successfully
+2020-06-04 00:02:00.088  INFO 6028 --- [http-nio-8080-exec-6] c.a.a.AuManagementApplication            : Request to display Employee with id 0 has been received 
+2020-06-04 00:02:00.272  INFO 6028 --- [http-nio-8080-exec-6] c.a.a.AuManagementApplication            : Request to display Employee with id 0 has been succesfully processed 
+2020-06-04 00:02:24.246  INFO 6028 --- [http-nio-8080-exec-9] c.a.a.AuManagementApplication            : Request to update Employee with id 0 has been received 
+2020-06-04 00:02:24.970  INFO 6028 --- [http-nio-8080-exec-9] c.a.a.AuManagementApplication            : Request to update Employee with id 0 has been processed succesfully 
+2020-06-04 00:02:25.847  INFO 6028 --- [http-nio-8080-exec-10] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 00:02:25.895  INFO 6028 --- [http-nio-8080-exec-10] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 00:02:38.757  INFO 6028 --- [http-nio-8080-exec-8] c.a.a.AuManagementApplication            : Request to get Demands is received 
+2020-06-04 00:02:38.757  INFO 6028 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to display Employee with id 0 has been received 
+2020-06-04 00:02:38.765  INFO 6028 --- [http-nio-8080-exec-8] c.a.a.AuManagementApplication            : Request to get Demands is processed successfully
+2020-06-04 00:02:38.885  INFO 6028 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to display Employee with id 0 has been succesfully processed 
+2020-06-04 00:02:58.423  INFO 6028 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to update Employee with id 0 has been received 
+2020-06-04 00:02:58.655  INFO 6028 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to update Employee with id 0 has been processed succesfully 
+2020-06-04 00:03:02.030  INFO 6028 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 00:03:02.046  INFO 6028 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 00:03:05.924  INFO 6028 --- [http-nio-8080-exec-9] c.a.a.AuManagementApplication            : Request to display Employee with id 0 has been received 
+2020-06-04 00:03:05.964  INFO 6028 --- [http-nio-8080-exec-9] c.a.a.AuManagementApplication            : Request to display Employee with id 0 has been succesfully processed 
+2020-06-04 00:03:06.068  INFO 6028 --- [http-nio-8080-exec-10] c.a.a.AuManagementApplication            : Request to get Demands is received 
+2020-06-04 00:03:06.116  INFO 6028 --- [http-nio-8080-exec-10] c.a.a.AuManagementApplication            : Request to get Demands is processed successfully
+2020-06-04 00:03:53.069  INFO 6028 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to update Employee with id 0 has been received 
+2020-06-04 00:03:53.401  INFO 6028 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to update Employee with id 0 has been processed succesfully 
+2020-06-04 00:03:55.935  INFO 6028 --- [http-nio-8080-exec-6] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 00:03:55.959  INFO 6028 --- [http-nio-8080-exec-6] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 00:04:04.449  INFO 6028 --- [http-nio-8080-exec-3] c.a.a.AuManagementApplication            : Request to get Demands is received 
+2020-06-04 00:04:04.449  INFO 6028 --- [http-nio-8080-exec-3] c.a.a.AuManagementApplication            : Request to get Demands is processed successfully
+2020-06-04 00:04:04.513  INFO 6028 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to display Employee with id 0 has been received 
+2020-06-04 00:04:04.633  INFO 6028 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to display Employee with id 0 has been succesfully processed 
+2020-06-04 00:04:10.145  INFO 6028 --- [http-nio-8080-exec-10] c.a.a.AuManagementApplication            : Request to update Employee with id 0 has been received 
+2020-06-04 00:04:10.457  INFO 6028 --- [http-nio-8080-exec-10] c.a.a.AuManagementApplication            : Request to update Employee with id 0 has been processed succesfully 
+2020-06-04 00:04:11.642  INFO 6028 --- [http-nio-8080-exec-2] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 00:04:11.650  INFO 6028 --- [http-nio-8080-exec-2] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 00:04:41.816  INFO 6028 --- [http-nio-8080-exec-6] c.a.a.AuManagementApplication            : Request to delete Employee with id 0 has been received 
+2020-06-04 00:04:41.968  INFO 6028 --- [http-nio-8080-exec-6] c.a.a.AuManagementApplication            : Request to delete Employee with id 0 has been completed successfully 
+2020-06-04 00:05:34.486  INFO 6028 --- [http-nio-8080-exec-3] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 00:05:34.494  INFO 6028 --- [http-nio-8080-exec-3] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 00:06:45.172  INFO 6028 --- [http-nio-8080-exec-9] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 00:06:45.260  INFO 6028 --- [http-nio-8080-exec-9] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 00:06:45.348  INFO 6028 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to get Demands is received 
+2020-06-04 00:06:45.388  INFO 6028 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to get Demands is processed successfully
+2020-06-04 00:06:54.152  INFO 6028 --- [http-nio-8080-exec-8] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 00:06:54.280  INFO 6028 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to get Demands is received 
+2020-06-04 00:06:54.336  INFO 6028 --- [http-nio-8080-exec-8] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 00:06:54.368  INFO 6028 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to get Demands is processed successfully
+2020-06-04 00:07:59.236  INFO 6028 --- [http-nio-8080-exec-3] c.a.a.AuManagementApplication            : Request to add Employee with id 2 has been received 
+2020-06-04 00:07:59.700  INFO 6028 --- [http-nio-8080-exec-3] c.a.a.AuManagementApplication            : Request to add Employee with id 2 has been succesfully completed 
+2020-06-04 00:08:20.652  INFO 6028 --- [http-nio-8080-exec-9] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 00:08:20.716  INFO 6028 --- [http-nio-8080-exec-9] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 00:08:42.295  INFO 6028 --- [http-nio-8080-exec-10] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 00:08:45.607  INFO 6028 --- [http-nio-8080-exec-10] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 00:09:13.422  INFO 6028 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to get Demands is received 
+2020-06-04 00:09:13.728  INFO 6028 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to get Demands is processed successfully
+2020-06-04 00:09:15.492  INFO 6028 --- [http-nio-8080-exec-8] c.a.a.AuManagementApplication            : Request to display Employee with id 2 has been received 
+2020-06-04 00:09:19.348  INFO 6028 --- [http-nio-8080-exec-8] c.a.a.AuManagementApplication            : Request to display Employee with id 2 has been succesfully processed 
+2020-06-04 00:09:33.991  INFO 6028 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to update Employee with id 2 has been received 
+2020-06-04 00:09:34.538  INFO 6028 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to update Employee with id 2 has been processed succesfully 
+2020-06-04 00:09:43.218  INFO 6028 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 00:09:43.278  INFO 6028 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 00:09:49.490  INFO 6028 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to delete Employee with id 2 has been received 
+2020-06-04 00:09:49.639  INFO 6028 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to delete Employee with id 2 has been completed successfully 
+2020-06-04 00:09:56.037  INFO 6028 --- [http-nio-8080-exec-8] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 00:09:56.107  INFO 6028 --- [http-nio-8080-exec-8] c.a.a.AuManagementApplication            : Request to display employees is processed successfully

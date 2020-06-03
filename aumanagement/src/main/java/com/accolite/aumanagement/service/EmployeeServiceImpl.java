@@ -13,38 +13,46 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 	@Autowired
 	EmployeeDaoImpl employeeDao ;
-	
+		
 	@Override
 	public List<Employee> getRequest() {
 		return employeeDao.getAllEmployees();
 	}
 
 	@Override
-	public Employee getRequest(int id) {
+	public Employee getRequestWithId(int id) {
 		
 		 return employeeDao.findEmployeeById(id);
 	}
 
 	@Override
-	public void postRequest(Employee t) {
-		employeeDao.addEmployee(t);
+	public boolean postRequest(Employee t) {
+		return employeeDao.addEmployee(t);
+		
+	}
+	
+
+	@Override
+	public boolean putRequest(int id, Employee t) {
+		return employeeDao.updateEmployee(id , t);
 		
 	}
 
 	@Override
-	public void putRequest(String id, Employee t) {
-		employeeDao.updateEmployee(Integer.valueOf(id) , t);
+	public boolean deleteRequest(int id) {
+		return employeeDao.deleteEmployee(id);
 		
 	}
 
-	@Override
-	public void deleteRequest(String id) {
-		employeeDao.deleteEmployee(Integer.valueOf(id));
-		
+	@Autowired
+	public EmployeeServiceImpl(EmployeeDaoImpl employeeDao) {
+		super();
+		this.employeeDao = employeeDao;
 	}
 
 	
 
+	
 	
 
 }

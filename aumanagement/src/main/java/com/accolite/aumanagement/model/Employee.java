@@ -39,6 +39,49 @@ public class Employee {
 	
 	
 	
+	public Employee(int id, String first_name) {
+		super();
+		this.id = id;
+		this.first_name = first_name;
+	}
+	
+	
+
+
+
+	public Employee(int id, String first_name ,String email,String pan_number) {
+		super();
+		this.id = id;
+		this.email = email;
+		this.version = 0;
+		this.first_name = first_name;
+		this.last_name = "Ram";
+		this.dob = new Date(12-03-1999);
+		this.blood_type = "O+ve";
+		this.gender = "Male";
+		this.date_of_joining = new Date(06-05-2020);
+		this.permanent_address = "Permanent Address";
+		P_pincode = 12345;
+		this.pan_number = pan_number;
+		this.skill_1 = "Angular";
+		this.skill_2 = "Java";
+		this.skill_3 = "Python";
+		this.status = true;
+		this.experience = 3;
+		this.phone_number = (658267373);
+		this.current_address = "Current Address";
+		C_pincode = 67890;
+		BGC = true;
+		this.designation = "SDE";
+		this.demand_id = 5;
+		this.bank_ac_no = 1234567;
+		this.ifsc_code = "PNB201719";
+		this.name = first_name;
+		this.branch = "PNB Branch";
+	}
+
+
+
 	public int getId() {
 		return id;
 	}
@@ -244,6 +287,47 @@ public class Employee {
 	public void setBranch(String branch) {
 		this.branch = branch;
 	}
+
+
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + id;
+		return result;
+	}
+
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Employee other = (Employee) obj;
+		if (id != other.id)
+			return false;
+		return true;
+	}
+
+
+
+	@Override
+	public String toString() {
+		return "Employee [id=" + id + ", email=" + email + ", version=" + version + ", first_name=" + first_name
+				+ ", last_name=" + last_name + ", dob=" + dob + ", blood_type=" + blood_type + ", gender=" + gender
+				+ ", date_of_joining=" + date_of_joining + ", permanent_address=" + permanent_address + ", P_pincode="
+				+ P_pincode + ", pan_number=" + pan_number + ", skill_1=" + skill_1 + ", skill_2=" + skill_2
+				+ ", skill_3=" + skill_3 + ", status=" + status + ", experience=" + experience + ", phone_number="
+				+ phone_number + ", current_address=" + current_address + ", C_pincode=" + C_pincode + ", BGC=" + BGC
+				+ ", designation=" + designation + ", demand_id=" + demand_id + ", bank_ac_no=" + bank_ac_no
+				+ ", ifsc_code=" + ifsc_code + ", name=" + name + ", branch=" + branch + "]";
+	}
+	
 	
 
 	

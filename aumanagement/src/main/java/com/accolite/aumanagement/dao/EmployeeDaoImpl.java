@@ -10,7 +10,6 @@ import org.springframework.stereotype.Repository;
 
 import com.accolite.aumanagement.model.Employee;
 import com.accolite.aumanagement.model.EmployeeRowMapper;
-import java.util.NoSuchElementException;
 import com.accolite.aumanagement.exception.*;
 
 /**
@@ -39,9 +38,9 @@ public class EmployeeDaoImpl implements EmployeeDao{
 		else
 		return list;
 		
-		
-		 
 	}
+	
+	
 
 	@Override
 	public Employee findEmployeeById(int id) {
@@ -52,13 +51,13 @@ public class EmployeeDaoImpl implements EmployeeDao{
 		
 			return employee;
 		}
-		catch(NoSuchElementException e) {
-			throw new CustomException("No Employee of given id is Present");
+		catch(Exception e) {
+			throw new CustomException("No Employee of given id is Present"+e.getMessage());
 		}
 	}
 
 	@Override
-	public void addEmployee(Employee employee) {
+	public boolean addEmployee(Employee employee) {
 		
 		try {
 		String query1 = "INSERT INTO `employee_constant`(`id`, `first_name`, `last_name`, `email`, `dob`, `blood_type`, `gender`, `date_of_joining`, `permanent_address`, `pincode`, `pan_number`, `version`) VALUES (? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? )";
@@ -75,13 +74,13 @@ public class EmployeeDaoImpl implements EmployeeDao{
 		//update Skill Details
 		String query4 = "INSERT INTO `skill`(`pan_number`, `skill_1`, `skill_2`, `skill_3`) VALUES (? , ? ,? , ? )";
 		template.update(query4, employee.getPan_number(),employee.getSkill_1(),employee.getSkill_2(),employee.getSkill_3());
-		
-		
+				
 		}
 		catch(Exception e)
 		{
 			throw new CustomException("Cant Add the given employee ");
 		}
+		return true;
 	}
 
 	/* (non-Javadoc)
@@ -98,7 +97,7 @@ public class EmployeeDaoImpl implements EmployeeDao{
 	 * 
 	 */
 	@Override
-	public void updateEmployee(int id , Employee employee) {
+	public boolean updateEmployee(int id , Employee employee) {
 				
 		try {
 			String query = "SELECT version FROM employee WHERE id = ?";
@@ -117,13 +116,12 @@ public class EmployeeDaoImpl implements EmployeeDao{
 			String query4 = "UPDATE `skill` SET `skill_1`= ? , `skill_2`=? , `skill_3`=?  WHERE `pan_number` = ?";
 			template.update(query4, employee.getSkill_1(), employee.getSkill_2(), employee.getSkill_3(),employee.getPan_number());
 			
-			
 		}
 		catch(Exception e)
 		{
 			throw new CustomException("Can't update the employee");
 		}
-		
+		return true;
 	}
 
 	
@@ -134,7 +132,7 @@ public class EmployeeDaoImpl implements EmployeeDao{
 	 * Secondary Details are still available after deleting
 	 */
 	@Override
-	public void deleteEmployee(int id) {
+	public boolean deleteEmployee(int id) {
 		try {
 			String query = "DELETE FROM `employee_constant` WHERE id = ?" ;
 			template.update(query, id);
@@ -143,7 +141,36 @@ public class EmployeeDaoImpl implements EmployeeDao{
 		{
 			throw new CustomException("Can't Delete Employee ");
 		}
+		return true;
 		
 	}
+
+
+
+	public EmployeeDaoImpl(JdbcTemplate template) {
+		super();
+		this.template = template;
+	}
+
+
+
+	@Autowired
+	public EmployeeDaoImpl() {
+		super();
+	}
+
+
+
+	public JdbcTemplate getTemplate() {
+		return template;
+	}
+
+
+
+	public void setTemplate(JdbcTemplate template) {
+		this.template = template;
+	}
+	
+	
 
 }

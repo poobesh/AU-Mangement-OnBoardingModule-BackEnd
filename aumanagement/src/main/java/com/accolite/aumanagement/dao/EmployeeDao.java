@@ -10,10 +10,10 @@ public interface EmployeeDao {
 	 
 	 public Employee findEmployeeById(int id);
 	 
-	 public void addEmployee(Employee employee);
+	 public boolean addEmployee(Employee employee);
 	 
-	 public void updateEmployee(int id ,Employee employee);
+	 public boolean updateEmployee(int id ,Employee employee);
 	 
-	 public void deleteEmployee(int id);
+	 public boolean deleteEmployee(int id);
 
 }
