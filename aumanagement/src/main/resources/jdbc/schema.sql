@@ -6,6 +6,13 @@ CREATE TABLE bank_details (
   branch varchar(30) NOT NULL
 )  ;
 
+DROP TABLE IF EXISTS  trends;
+CREATE TABLE trends (
+  company_name varchar(30) NOT NULL,
+  count int(11) NOT NULL,
+  year int(11) NOT NULL
+)  ;
+
 DROP TABLE IF EXISTS employee;
 CREATE TABLE employee (
 id int(11)

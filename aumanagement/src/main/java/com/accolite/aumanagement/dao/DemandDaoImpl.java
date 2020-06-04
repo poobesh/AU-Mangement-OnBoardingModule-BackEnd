@@ -10,6 +10,8 @@ import org.springframework.stereotype.Repository;
 import com.accolite.aumanagement.exception.CustomException;
 import com.accolite.aumanagement.model.Demand;
 import com.accolite.aumanagement.model.DemandRowMapper;
+import com.accolite.aumanagement.model.TrendRowMapper;
+import com.accolite.aumanagement.model.Trends;
 
 @Repository
 public class DemandDaoImpl implements DemandDao {
@@ -24,9 +26,14 @@ public class DemandDaoImpl implements DemandDao {
 		this.template = template;
 	}
 
+//SELECT company_name , required_employee_count , YEAR(posted_date) as year FROM demand JOIN hiring_manager ON id = hiring_manager_id GROUP BY year,company_name
+//SELECT company_name ,sum(required_employee_count) , YEAR(posted_date) as year FROM demand JOIN hiring_manager ON id = hiring_manager_id GROUP BY year,company_name
+//SELECT * FROM `trends` WHERE company_name = "XYZ"
+//SELECT DISTINCT company_name FROM `trends`
+
 	@Override
 	public List<Demand> getDemands() {
-		String query = "SELECT * from demand";
+		String query = "SELECT * FROM demand WHERE status = 'active'";
 		RowMapper<Demand> rowMapper = new DemandRowMapper();
 		List<Demand> list;
 		
@@ -39,6 +46,37 @@ public class DemandDaoImpl implements DemandDao {
 		else
 		return list;
 		
+	}
+	@Override
+	public List<Trends> getTrends(String name) {
+		
+		String query = "SELECT * FROM trends WHERE company_name = ?";
+		RowMapper<Trends> rowMapper = new TrendRowMapper();
+		List<Trends> list;
+		
+		list = template.query(query, rowMapper ,name );
+		
+		if(list.isEmpty())
+		{
+			throw new CustomException("No Trends are available ");
+		}
+		else
+		return list;
+		
+	}
+	@Override
+	public List<Trends> getCompanyNames() {
+		String query = "SELECT * FROM trends GROUP BY company_name";
+		List<Trends> list;
+		RowMapper<Trends> rowMapper = new TrendRowMapper();
+		list = template.query(query, rowMapper);
+		
+		if(list.isEmpty())
+		{
+			throw new CustomException("No Trends are available ");
+		}
+		else
+		return list;
 	}
 	
 

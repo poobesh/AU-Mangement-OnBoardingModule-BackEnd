@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.accolite.aumanagement.dao.DemandDao;
 import com.accolite.aumanagement.dao.DemandDaoImpl;
 import com.accolite.aumanagement.model.Demand;
+import com.accolite.aumanagement.model.Trends;
 
 @Service
 public class DemandServiceImpl implements DemandService{
@@ -20,6 +21,14 @@ public class DemandServiceImpl implements DemandService{
 	@Override
 	public List<Demand> getDemands() {
 		return demandDao.getDemands();
+	}
+	@Override
+	public List<Trends> getTrends(String name) {
+		return demandDao.getTrends(name);
+	}
+	@Override
+	public List<Trends> getCompanyNames() {
+		return demandDao.getCompanyNames();
 	}
 
 }

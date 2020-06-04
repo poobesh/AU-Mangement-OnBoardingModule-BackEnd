@@ -3,6 +3,7 @@ package com.accolite.aumanagement.unittests;
 
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import java.util.Arrays;
 import java.util.List;
@@ -60,7 +61,7 @@ public class EmployeeControllerTest {
 	public void postEmployee() {
 		Employee temp = new Employee(1,"Ram");
 		Mockito.when(employeeService.postRequest(temp)).thenReturn(true);
-		assertEquals(employeeController.postEmployee(temp),"Successfully Posted"+temp.getId());
+		assertEquals(employeeService.postRequest(temp),true);
 	}
 	@Test(expected = CustomException.class)
 	public void postEmployeeError() {
@@ -72,7 +73,7 @@ public class EmployeeControllerTest {
 	public void updateEmployee() {
 		Employee temp = new Employee(1,"Raman");
 		Mockito.when(employeeService.putRequest(temp.getId(), temp)).thenReturn(true);
-		assertEquals(employeeController.putEmployee("1",temp),"Succesfully Updated"+temp.getId());
+		assertTrue(employeeService.putRequest(1,temp));
 	}
 	@Test(expected = CustomException.class)
 	public void updateEmployeeError() {
@@ -83,7 +84,12 @@ public class EmployeeControllerTest {
 	@Test
 	public void deleteEmployee() {
 		Mockito.when(employeeService.deleteRequest(Mockito.anyInt())).thenReturn(true);
-		assertEquals(employeeController.deleteEmployee("1"),"Successfully Deleted id = 1");
+		assertTrue(employeeService.deleteRequest(1));
+	}
+	@Test(expected = CustomException.class)
+	public void deleteEmployeeFail() {
+		Mockito.when(employeeService.deleteRequest(Mockito.anyInt())).thenThrow(new CustomException("Can't Delete Employee "));
+		employeeService.deleteRequest(500);
 	}
 
 }

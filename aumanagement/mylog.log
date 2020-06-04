@@ -74,3 +74,437 @@
 2020-06-04 00:09:49.639  INFO 6028 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to delete Employee with id 2 has been completed successfully 
 2020-06-04 00:09:56.037  INFO 6028 --- [http-nio-8080-exec-8] c.a.a.AuManagementApplication            : Request to display employees is received 
 2020-06-04 00:09:56.107  INFO 6028 --- [http-nio-8080-exec-8] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 10:56:39.546  INFO 1740 --- [restartedMain] c.a.a.AuManagementApplication            : Starting AuManagementApplication on SATHISH with PID 1740 (D:\Project\Final\BackEnd\AU-Mangement-OnBoardingModule-BackEnd\aumanagement\target\classes started by Sathish-PC in D:\Project\Final\BackEnd\AU-Mangement-OnBoardingModule-BackEnd\aumanagement)
+2020-06-04 10:56:39.578  INFO 1740 --- [restartedMain] c.a.a.AuManagementApplication            : No active profile set, falling back to default profiles: default
+2020-06-04 10:56:39.765  INFO 1740 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-06-04 10:56:39.765  INFO 1740 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-06-04 10:56:44.500  INFO 1740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-06-04 10:56:44.594  INFO 1740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 77ms. Found 0 JDBC repository interfaces.
+2020-06-04 10:56:48.156  INFO 1740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-04 10:56:48.234  INFO 1740 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-04 10:56:48.250  INFO 1740 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-04 10:56:48.547  INFO 1740 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-04 10:56:48.547  INFO 1740 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 8782 ms
+2020-06-04 10:56:50.625  INFO 1740 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-04 10:56:52.297  INFO 1740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-04 10:56:52.297  WARN 1740 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-06-04 10:56:59.360  INFO 1740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-04 10:56:59.985  INFO 1740 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-06-04 10:57:00.001  INFO 1740 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-06-04 10:57:00.313  INFO 1740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-06-04 10:57:00.376  INFO 1740 --- [restartedMain] c.a.a.AuManagementApplication            : Started AuManagementApplication in 22.08 seconds (JVM running for 23.485)
+2020-06-04 11:12:09.086  WARN 1740 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m9s379ms996µs989ns).
+2020-06-04 11:12:11.331  INFO 1740 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-04 11:12:11.331  INFO 1740 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-04 11:12:11.886  INFO 1740 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 554 ms
+2020-06-04 11:12:16.481  INFO 1740 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 11:12:16.499  INFO 1740 --- [http-nio-8080-exec-3] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 11:12:16.519  INFO 1740 --- [http-nio-8080-exec-2] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 11:12:30.012  INFO 1740 --- [http-nio-8080-exec-2] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 11:12:30.012  INFO 1740 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 11:12:30.014  INFO 1740 --- [http-nio-8080-exec-3] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 11:12:37.813  INFO 1740 --- [http-nio-8080-exec-6] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 11:12:38.080  INFO 1740 --- [http-nio-8080-exec-6] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 11:13:27.951  INFO 1740 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 11:13:27.955  INFO 1740 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 11:13:28.462  INFO 1740 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to get Demands is received 
+2020-06-04 11:13:30.785  INFO 1740 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to get Demands is processed successfully
+2020-06-04 11:15:45.229  INFO 1740 --- [http-nio-8080-exec-6] c.a.a.AuManagementApplication            : Request to add Employee with id 2 has been received 
+2020-06-04 11:15:46.526  INFO 1740 --- [http-nio-8080-exec-6] c.a.a.AuManagementApplication            : Request to add Employee with id 2 has been succesfully completed 
+2020-06-04 11:22:40.896  INFO 1740 --- [http-nio-8080-exec-3] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 11:22:49.620  INFO 1740 --- [http-nio-8080-exec-3] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 11:23:00.833  INFO 1740 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to get Demands is received 
+2020-06-04 11:23:01.762  INFO 1740 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to get Demands is processed successfully
+2020-06-04 11:23:17.413  INFO 1740 --- [http-nio-8080-exec-4] c.a.a.AuManagementApplication            : Request to display Employee with id 2 has been received 
+2020-06-04 11:23:21.797  INFO 1740 --- [http-nio-8080-exec-4] c.a.a.AuManagementApplication            : Request to display Employee with id 2 has been succesfully processed 
+2020-06-04 11:24:32.770  INFO 1740 --- [http-nio-8080-exec-8] c.a.a.AuManagementApplication            : Request to update Employee with id 2 has been received 
+2020-06-04 11:24:33.676  INFO 1740 --- [http-nio-8080-exec-8] c.a.a.AuManagementApplication            : Request to update Employee with id 2 has been processed succesfully 
+2020-06-04 11:29:16.131  INFO 1740 --- [http-nio-8080-exec-2] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 11:29:17.984  INFO 1740 --- [http-nio-8080-exec-2] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 11:29:24.548  INFO 1740 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to get Demands is received 
+2020-06-04 11:29:24.756  INFO 1740 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to get Demands is processed successfully
+2020-06-04 11:29:25.255  INFO 1740 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to display Employee with id 2 has been received 
+2020-06-04 11:29:26.275  INFO 1740 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to display Employee with id 2 has been succesfully processed 
+2020-06-04 11:34:53.575  INFO 1740 --- [http-nio-8080-exec-10] c.a.a.AuManagementApplication            : Request to get Demands is received 
+2020-06-04 11:34:56.231  INFO 1740 --- [http-nio-8080-exec-10] c.a.a.AuManagementApplication            : Request to get Demands is processed successfully
+2020-06-04 11:34:57.327  INFO 1740 --- [http-nio-8080-exec-9] c.a.a.AuManagementApplication            : Request to display Employee with id 2 has been received 
+2020-06-04 11:35:06.368  INFO 1740 --- [http-nio-8080-exec-9] c.a.a.AuManagementApplication            : Request to display Employee with id 2 has been succesfully processed 
+2020-06-04 11:36:40.355  INFO 1740 --- [http-nio-8080-exec-2] c.a.a.AuManagementApplication            : Request to get Demands is received 
+2020-06-04 11:36:40.555  INFO 1740 --- [http-nio-8080-exec-2] c.a.a.AuManagementApplication            : Request to get Demands is processed successfully
+2020-06-04 11:36:40.739  INFO 1740 --- [http-nio-8080-exec-3] c.a.a.AuManagementApplication            : Request to display Employee with id 2 has been received 
+2020-06-04 11:36:41.739  INFO 1740 --- [http-nio-8080-exec-3] c.a.a.AuManagementApplication            : Request to display Employee with id 2 has been succesfully processed 
+2020-06-04 11:37:17.184  INFO 1740 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to display Employee with id 2 has been received 
+2020-06-04 11:37:17.512  INFO 1740 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to display Employee with id 2 has been succesfully processed 
+2020-06-04 11:37:17.520  INFO 1740 --- [http-nio-8080-exec-4] c.a.a.AuManagementApplication            : Request to get Demands is received 
+2020-06-04 11:37:18.888  INFO 1740 --- [http-nio-8080-exec-4] c.a.a.AuManagementApplication            : Request to get Demands is processed successfully
+2020-06-04 11:41:23.831  INFO 1740 --- [http-nio-8080-exec-9] c.a.a.AuManagementApplication            : Request to get Demands is received 
+2020-06-04 11:41:26.879  INFO 1740 --- [http-nio-8080-exec-6] c.a.a.AuManagementApplication            : Request to display Employee with id 2 has been received 
+2020-06-04 11:41:38.444  INFO 1740 --- [http-nio-8080-exec-9] c.a.a.AuManagementApplication            : Request to get Demands is processed successfully
+2020-06-04 11:41:38.572  INFO 1740 --- [http-nio-8080-exec-6] c.a.a.AuManagementApplication            : Request to display Employee with id 2 has been succesfully processed 
+2020-06-04 11:42:14.006  INFO 1740 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to update Employee with id 2 has been received 
+2020-06-04 11:42:14.756  INFO 1740 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to update Employee with id 2 has been processed succesfully 
+2020-06-04 11:43:09.157  INFO 1740 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 11:43:09.213  INFO 1740 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 11:43:15.192  INFO 1740 --- [http-nio-8080-exec-10] c.a.a.AuManagementApplication            : Request to display Employee with id 2 has been received 
+2020-06-04 11:43:15.184  INFO 1740 --- [http-nio-8080-exec-8] c.a.a.AuManagementApplication            : Request to get Demands is received 
+2020-06-04 11:43:15.312  INFO 1740 --- [http-nio-8080-exec-8] c.a.a.AuManagementApplication            : Request to get Demands is processed successfully
+2020-06-04 11:43:15.312  INFO 1740 --- [http-nio-8080-exec-10] c.a.a.AuManagementApplication            : Request to display Employee with id 2 has been succesfully processed 
+2020-06-04 11:43:46.120  INFO 1740 --- [http-nio-8080-exec-2] c.a.a.AuManagementApplication            : Request to update Employee with id 2 has been received 
+2020-06-04 11:43:46.496  INFO 1740 --- [http-nio-8080-exec-2] c.a.a.AuManagementApplication            : Request to update Employee with id 2 has been processed succesfully 
+2020-06-04 11:43:58.936  INFO 1740 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 11:43:59.032  INFO 1740 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 11:44:09.725  INFO 1740 --- [http-nio-8080-exec-4] c.a.a.AuManagementApplication            : Request to delete Employee with id 2 has been received 
+2020-06-04 11:44:10.210  INFO 1740 --- [http-nio-8080-exec-4] c.a.a.AuManagementApplication            : Request to delete Employee with id 2 has been completed successfully 
+2020-06-04 11:44:25.207  INFO 1740 --- [http-nio-8080-exec-10] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 11:44:25.615  INFO 1740 --- [http-nio-8080-exec-10] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 11:55:39.255  INFO 1740 --- [http-nio-8080-exec-6] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 11:55:39.599  INFO 1740 --- [http-nio-8080-exec-6] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 11:56:42.348  INFO 1740 --- [http-nio-8080-exec-2] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 11:56:44.420  INFO 1740 --- [http-nio-8080-exec-2] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 11:57:15.943  INFO 1740 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 11:57:20.406  INFO 1740 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 11:57:41.178  INFO 1740 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 11:57:41.498  INFO 1740 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 12:00:20.274  INFO 1740 --- [http-nio-8080-exec-10] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 12:00:26.578  INFO 1740 --- [http-nio-8080-exec-10] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 12:00:45.602  INFO 1740 --- [http-nio-8080-exec-9] c.a.a.AuManagementApplication            : Request to get Demands is received 
+2020-06-04 12:00:46.498  INFO 1740 --- [http-nio-8080-exec-9] c.a.a.AuManagementApplication            : Request to get Demands is processed successfully
+2020-06-04 12:00:46.498  INFO 1740 --- [http-nio-8080-exec-6] c.a.a.AuManagementApplication            : Request to display Employee with id 1 has been received 
+2020-06-04 12:00:48.733  INFO 1740 --- [http-nio-8080-exec-6] c.a.a.AuManagementApplication            : Request to display Employee with id 1 has been succesfully processed 
+2020-06-04 12:02:11.590  INFO 1740 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to display Employee with id 1 has been received 
+2020-06-04 12:02:14.014  INFO 1740 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to get Demands is received 
+2020-06-04 12:02:14.198  INFO 1740 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to display Employee with id 1 has been succesfully processed 
+2020-06-04 12:02:21.502  INFO 1740 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to get Demands is processed successfully
+2020-06-04 12:02:48.894  INFO 1740 --- [http-nio-8080-exec-10] c.a.a.AuManagementApplication            : Request to display Employee with id 1 has been received 
+2020-06-04 12:02:49.334  INFO 1740 --- [http-nio-8080-exec-8] c.a.a.AuManagementApplication            : Request to get Demands is received 
+2020-06-04 12:02:53.526  INFO 1740 --- [http-nio-8080-exec-8] c.a.a.AuManagementApplication            : Request to get Demands is processed successfully
+2020-06-04 12:02:54.094  INFO 1740 --- [http-nio-8080-exec-10] c.a.a.AuManagementApplication            : Request to display Employee with id 1 has been succesfully processed 
+2020-06-04 12:03:35.082  INFO 1740 --- [http-nio-8080-exec-2] c.a.a.AuManagementApplication            : Request to update Employee with id 1 has been received 
+2020-06-04 12:03:36.936  INFO 1740 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 12:03:37.120  INFO 1740 --- [http-nio-8080-exec-2] c.a.a.AuManagementApplication            : Request to update Employee with id 1 has been processed succesfully 
+2020-06-04 12:03:37.136  INFO 1740 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 12:07:39.954  INFO 1740 --- [http-nio-8080-exec-4] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 12:07:39.978  INFO 1740 --- [http-nio-8080-exec-4] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 12:07:49.673  INFO 1740 --- [http-nio-8080-exec-10] c.a.a.AuManagementApplication            : Request to display Employee with id 1 has been received 
+2020-06-04 12:07:49.721  INFO 1740 --- [http-nio-8080-exec-9] c.a.a.AuManagementApplication            : Request to get Demands is received 
+2020-06-04 12:07:49.721  INFO 1740 --- [http-nio-8080-exec-9] c.a.a.AuManagementApplication            : Request to get Demands is processed successfully
+2020-06-04 12:07:59.279  INFO 1740 --- [http-nio-8080-exec-10] c.a.a.AuManagementApplication            : Request to display Employee with id 1 has been succesfully processed 
+2020-06-04 12:08:13.689  INFO 1740 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to update Employee with id 1 has been received 
+2020-06-04 12:08:14.129  INFO 1740 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to update Employee with id 1 has been processed succesfully 
+2020-06-04 12:08:30.817  INFO 1740 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 12:08:30.841  INFO 1740 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 12:09:56.269  INFO 1740 --- [http-nio-8080-exec-4] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 12:09:56.589  INFO 1740 --- [http-nio-8080-exec-4] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 12:10:55.014  INFO 1740 --- [http-nio-8080-exec-9] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 12:10:56.718  INFO 1740 --- [http-nio-8080-exec-9] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 12:11:02.094  INFO 1740 --- [http-nio-8080-exec-10] c.a.a.AuManagementApplication            : Request to get Demands is received 
+2020-06-04 12:11:04.625  INFO 1740 --- [http-nio-8080-exec-10] c.a.a.AuManagementApplication            : Request to get Demands is processed successfully
+2020-06-04 12:11:07.212  INFO 1740 --- [http-nio-8080-exec-6] c.a.a.AuManagementApplication            : Request to display Employee with id 1 has been received 
+2020-06-04 12:11:11.644  INFO 1740 --- [http-nio-8080-exec-6] c.a.a.AuManagementApplication            : Request to display Employee with id 1 has been succesfully processed 
+2020-06-04 12:11:31.549  INFO 1740 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 12:11:31.725  INFO 1740 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 12:11:34.314  INFO 1740 --- [http-nio-8080-exec-2] c.a.a.AuManagementApplication            : Request to update Employee with id 1 has been received 
+2020-06-04 12:11:35.227  INFO 1740 --- [http-nio-8080-exec-2] c.a.a.AuManagementApplication            : Request to update Employee with id 1 has been processed succesfully 
+2020-06-04 12:13:18.357  INFO 1740 --- [http-nio-8080-exec-8] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 12:13:18.645  INFO 1740 --- [http-nio-8080-exec-8] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 12:13:22.854  INFO 1740 --- [http-nio-8080-exec-10] c.a.a.AuManagementApplication            : Request to display Employee with id 1 has been received 
+2020-06-04 12:13:24.702  INFO 1740 --- [http-nio-8080-exec-10] c.a.a.AuManagementApplication            : Request to display Employee with id 1 has been succesfully processed 
+2020-06-04 12:13:24.878  INFO 1740 --- [http-nio-8080-exec-3] c.a.a.AuManagementApplication            : Request to get Demands is received 
+2020-06-04 12:13:25.366  INFO 1740 --- [http-nio-8080-exec-3] c.a.a.AuManagementApplication            : Request to get Demands is processed successfully
+2020-06-04 12:13:41.867  INFO 1740 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to update Employee with id 1 has been received 
+2020-06-04 12:13:43.915  INFO 1740 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to update Employee with id 1 has been processed succesfully 
+2020-06-04 12:13:47.985  INFO 1740 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 12:13:48.025  INFO 1740 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 12:14:05.043  INFO 1740 --- [http-nio-8080-exec-8] c.a.a.AuManagementApplication            : Request to display Employee with id 1 has been received 
+2020-06-04 12:14:05.115  INFO 1740 --- [http-nio-8080-exec-9] c.a.a.AuManagementApplication            : Request to get Demands is received 
+2020-06-04 12:14:05.123  INFO 1740 --- [http-nio-8080-exec-9] c.a.a.AuManagementApplication            : Request to get Demands is processed successfully
+2020-06-04 12:14:05.187  INFO 1740 --- [http-nio-8080-exec-8] c.a.a.AuManagementApplication            : Request to display Employee with id 1 has been succesfully processed 
+2020-06-04 12:14:30.562  INFO 1740 --- [http-nio-8080-exec-6] c.a.a.AuManagementApplication            : Request to update Employee with id 1 has been received 
+2020-06-04 12:14:31.002  INFO 1740 --- [http-nio-8080-exec-6] c.a.a.AuManagementApplication            : Request to update Employee with id 1 has been processed succesfully 
+2020-06-04 12:14:36.318  INFO 1740 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 12:14:36.326  INFO 1740 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 12:14:38.277  INFO 1740 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to display Employee with id 1 has been received 
+2020-06-04 12:14:38.301  INFO 1740 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to display Employee with id 1 has been succesfully processed 
+2020-06-04 12:14:38.621  INFO 1740 --- [http-nio-8080-exec-2] c.a.a.AuManagementApplication            : Request to get Demands is received 
+2020-06-04 12:14:38.733  INFO 1740 --- [http-nio-8080-exec-2] c.a.a.AuManagementApplication            : Request to get Demands is processed successfully
+2020-06-04 12:15:08.071  INFO 1740 --- [http-nio-8080-exec-9] c.a.a.AuManagementApplication            : Request to update Employee with id 1 has been received 
+2020-06-04 12:15:08.695  INFO 1740 --- [http-nio-8080-exec-9] c.a.a.AuManagementApplication            : Request to update Employee with id 1 has been processed succesfully 
+2020-06-04 12:15:58.734  INFO 1740 --- [http-nio-8080-exec-10] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 12:15:58.750  INFO 1740 --- [http-nio-8080-exec-10] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 12:16:02.342  INFO 1740 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to get Demands is received 
+2020-06-04 12:16:02.342  INFO 1740 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to get Demands is processed successfully
+2020-06-04 12:16:04.255  INFO 1740 --- [http-nio-8080-exec-6] c.a.a.AuManagementApplication            : Request to display Employee with id 1 has been received 
+2020-06-04 12:16:10.952  INFO 1740 --- [http-nio-8080-exec-6] c.a.a.AuManagementApplication            : Request to display Employee with id 1 has been succesfully processed 
+2020-06-04 12:16:32.249  INFO 1740 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to update Employee with id 1 has been received 
+2020-06-04 12:16:32.785  INFO 1740 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to update Employee with id 1 has been processed succesfully 
+2020-06-04 12:17:15.293  INFO 1740 --- [http-nio-8080-exec-9] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 12:17:15.509  INFO 1740 --- [http-nio-8080-exec-9] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 12:17:21.755  INFO 1740 --- [http-nio-8080-exec-10] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 12:17:21.963  INFO 1740 --- [http-nio-8080-exec-10] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 12:17:24.167  INFO 1740 --- [http-nio-8080-exec-3] c.a.a.AuManagementApplication            : Request to display Employee with id 1 has been received 
+2020-06-04 12:17:24.183  INFO 1740 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to get Demands is received 
+2020-06-04 12:17:24.199  INFO 1740 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to get Demands is processed successfully
+2020-06-04 12:17:24.607  INFO 1740 --- [http-nio-8080-exec-3] c.a.a.AuManagementApplication            : Request to display Employee with id 1 has been succesfully processed 
+2020-06-04 12:17:36.618  INFO 1740 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to update Employee with id 1 has been received 
+2020-06-04 12:17:36.914  INFO 1740 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to update Employee with id 1 has been processed succesfully 
+2020-06-04 12:17:41.369  INFO 1740 --- [http-nio-8080-exec-4] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 12:17:41.433  INFO 1740 --- [http-nio-8080-exec-4] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 12:18:36.927  INFO 1740 --- [http-nio-8080-exec-8] c.a.a.AuManagementApplication            : Request to display Employee with id 1 has been received 
+2020-06-04 12:18:36.999  INFO 1740 --- [http-nio-8080-exec-8] c.a.a.AuManagementApplication            : Request to display Employee with id 1 has been succesfully processed 
+2020-06-04 12:18:37.231  INFO 1740 --- [http-nio-8080-exec-10] c.a.a.AuManagementApplication            : Request to get Demands is received 
+2020-06-04 12:18:37.247  INFO 1740 --- [http-nio-8080-exec-10] c.a.a.AuManagementApplication            : Request to get Demands is processed successfully
+2020-06-04 12:27:49.838  INFO 1740 --- [http-nio-8080-exec-6] c.a.a.AuManagementApplication            : Request to display Employee with id 1 has been received 
+2020-06-04 12:27:50.654  INFO 1740 --- [http-nio-8080-exec-2] c.a.a.AuManagementApplication            : Request to get Demands is received 
+2020-06-04 12:27:51.110  INFO 1740 --- [http-nio-8080-exec-6] c.a.a.AuManagementApplication            : Request to display Employee with id 1 has been succesfully processed 
+2020-06-04 12:27:51.822  INFO 1740 --- [http-nio-8080-exec-2] c.a.a.AuManagementApplication            : Request to get Demands is processed successfully
+2020-06-04 12:28:53.607  INFO 1740 --- [http-nio-8080-exec-4] c.a.a.AuManagementApplication            : Request to display Employee with id 1 has been received 
+2020-06-04 12:28:53.879  INFO 1740 --- [http-nio-8080-exec-9] c.a.a.AuManagementApplication            : Request to get Demands is received 
+2020-06-04 12:28:53.943  INFO 1740 --- [http-nio-8080-exec-9] c.a.a.AuManagementApplication            : Request to get Demands is processed successfully
+2020-06-04 12:28:53.959  INFO 1740 --- [http-nio-8080-exec-4] c.a.a.AuManagementApplication            : Request to display Employee with id 1 has been succesfully processed 
+2020-06-04 14:01:05.464  WARN 1740 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=35m18s975ms946µs811ns).
+2020-06-04 20:22:37.877  INFO 932 --- [restartedMain] c.a.a.AuManagementApplication            : Starting AuManagementApplication on SATHISH with PID 932 (D:\Project\Final\BackEnd\AU-Mangement-OnBoardingModule-BackEnd\aumanagement\target\classes started by Sathish-PC in D:\Project\Final\BackEnd\AU-Mangement-OnBoardingModule-BackEnd\aumanagement)
+2020-06-04 20:22:37.908  INFO 932 --- [restartedMain] c.a.a.AuManagementApplication            : No active profile set, falling back to default profiles: default
+2020-06-04 20:22:38.424  INFO 932 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-06-04 20:22:38.424  INFO 932 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-06-04 20:22:45.159  INFO 932 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-06-04 20:22:45.334  INFO 932 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 120ms. Found 0 JDBC repository interfaces.
+2020-06-04 20:22:51.296  INFO 932 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-04 20:22:51.413  INFO 932 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-04 20:22:51.413  INFO 932 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-04 20:22:51.960  INFO 932 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-04 20:22:51.960  INFO 932 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 13536 ms
+2020-06-04 20:22:54.719  INFO 932 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-04 20:22:56.326  INFO 932 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-04 20:22:56.340  WARN 932 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-06-04 20:22:59.543  INFO 932 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-04 20:23:00.479  INFO 932 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-06-04 20:23:00.494  INFO 932 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-06-04 20:23:00.807  INFO 932 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-06-04 20:23:00.886  INFO 932 --- [restartedMain] c.a.a.AuManagementApplication            : Started AuManagementApplication in 29.807 seconds (JVM running for 35.243)
+2020-06-04 20:24:52.389  INFO 932 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-04 20:24:52.389  INFO 932 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-04 20:24:52.420  INFO 932 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 31 ms
+2020-06-04 20:24:52.712  INFO 932 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to get Demands is received 
+2020-06-04 20:24:55.681  INFO 932 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to get Demands is processed successfully
+2020-06-04 20:25:20.435  INFO 932 --- [http-nio-8080-exec-3] c.a.a.AuManagementApplication            : Request to get Company Names is received 
+2020-06-04 20:25:24.835  INFO 932 --- [http-nio-8080-exec-3] c.a.a.AuManagementApplication            : Request to get Company names is processed successfully
+2020-06-04 20:25:43.130  INFO 932 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to get Trends for company XYZ is received 
+2020-06-04 20:25:43.329  INFO 932 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to get Trends company XYZ is processed successfully
+2020-06-04 20:26:18.636  INFO 932 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to get Company Names is received 
+2020-06-04 20:26:18.769  INFO 932 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to get Company names is processed successfully
+2020-06-04 20:50:08.521  INFO 4032 --- [restartedMain] c.a.a.AuManagementApplication            : Starting AuManagementApplication on SATHISH with PID 4032 (D:\Project\Final\BackEnd\AU-Mangement-OnBoardingModule-BackEnd\aumanagement\target\classes started by Sathish-PC in D:\Project\Final\BackEnd\AU-Mangement-OnBoardingModule-BackEnd\aumanagement)
+2020-06-04 20:50:08.553  INFO 4032 --- [restartedMain] c.a.a.AuManagementApplication            : No active profile set, falling back to default profiles: default
+2020-06-04 20:50:08.873  INFO 4032 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-06-04 20:50:08.874  INFO 4032 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-06-04 20:50:23.947  INFO 4032 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-06-04 20:50:25.201  INFO 4032 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 669ms. Found 0 JDBC repository interfaces.
+2020-06-04 20:50:34.562  INFO 4032 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-04 20:50:35.196  INFO 4032 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-04 20:50:35.197  INFO 4032 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-04 20:50:39.096  INFO 4032 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-04 20:50:39.097  INFO 4032 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 30221 ms
+2020-06-04 20:50:42.863  INFO 4032 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-04 20:50:50.311  INFO 4032 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-04 20:50:50.856  WARN 4032 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-06-04 20:50:54.542  INFO 4032 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-04 20:50:55.443  INFO 4032 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-06-04 20:50:55.462  INFO 4032 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-06-04 20:50:56.503  INFO 4032 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-06-04 20:50:56.620  INFO 4032 --- [restartedMain] c.a.a.AuManagementApplication            : Started AuManagementApplication in 52.368 seconds (JVM running for 54.655)
+2020-06-04 20:51:57.239  INFO 4032 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-04 20:51:57.242  INFO 4032 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-04 20:51:57.263  INFO 4032 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 20 ms
+2020-06-04 20:51:57.495  INFO 4032 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to get Company Names is received 
+2020-06-04 20:51:58.075  INFO 4032 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to get Company names is processed successfully
+2020-06-04 20:52:29.320  INFO 4032 --- [http-nio-8080-exec-3] c.a.a.AuManagementApplication            : Request to get Trends for company XYZ is received 
+2020-06-04 20:52:30.591  INFO 4032 --- [http-nio-8080-exec-3] c.a.a.AuManagementApplication            : Request to get Trends company XYZ is processed successfully
+2020-06-04 22:13:42.725  INFO 3064 --- [restartedMain] c.a.a.AuManagementApplication            : Starting AuManagementApplication on SATHISH with PID 3064 (D:\Project\Final\BackEnd\AU-Mangement-OnBoardingModule-BackEnd\aumanagement\target\classes started by Sathish-PC in D:\Project\Final\BackEnd\AU-Mangement-OnBoardingModule-BackEnd\aumanagement)
+2020-06-04 22:13:42.769  INFO 3064 --- [restartedMain] c.a.a.AuManagementApplication            : No active profile set, falling back to default profiles: default
+2020-06-04 22:13:42.987  INFO 3064 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-06-04 22:13:42.987  INFO 3064 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-06-04 22:13:47.926  INFO 3064 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-06-04 22:13:48.008  INFO 3064 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64ms. Found 0 JDBC repository interfaces.
+2020-06-04 22:13:51.598  INFO 3064 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-04 22:13:51.706  INFO 3064 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-04 22:13:51.706  INFO 3064 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-04 22:13:52.071  INFO 3064 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-04 22:13:52.071  INFO 3064 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 9084 ms
+2020-06-04 22:13:54.240  INFO 3064 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-04 22:13:55.440  INFO 3064 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-04 22:13:55.445  WARN 3064 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-06-04 22:13:57.022  INFO 3064 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-04 22:14:01.917  INFO 3064 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-06-04 22:14:01.933  INFO 3064 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-06-04 22:14:05.193  INFO 3064 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-06-04 22:14:05.650  INFO 3064 --- [restartedMain] c.a.a.AuManagementApplication            : Started AuManagementApplication in 24.218 seconds (JVM running for 25.679)
+2020-06-04 22:37:10.547  INFO 3064 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-04 22:37:10.656  INFO 3064 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-04 22:37:11.735  INFO 3064 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1079 ms
+2020-06-04 22:37:17.891  INFO 3064 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 22:37:19.422  INFO 3064 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 22:52:22.598  INFO 3064 --- [http-nio-8080-exec-3] c.a.a.AuManagementApplication            : Request to get Company Names is received 
+2020-06-04 22:52:32.439  INFO 3064 --- [http-nio-8080-exec-3] c.a.a.AuManagementApplication            : Request to get Company names is processed successfully
+2020-06-04 22:54:29.750  INFO 3064 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to get Company Names is received 
+2020-06-04 22:54:32.624  INFO 3064 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to get Company names is processed successfully
+2020-06-04 22:57:19.746  INFO 3064 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to get Company Names is received 
+2020-06-04 22:57:19.868  INFO 3064 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to get Company names is processed successfully
+2020-06-04 22:57:35.164  INFO 3064 --- [http-nio-8080-exec-9] c.a.a.AuManagementApplication            : Request to get Company Names is received 
+2020-06-04 22:57:35.257  INFO 3064 --- [http-nio-8080-exec-9] c.a.a.AuManagementApplication            : Request to get Company names is processed successfully
+2020-06-04 22:58:03.222  INFO 3064 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to get Company Names is received 
+2020-06-04 22:58:03.348  INFO 3064 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to get Company names is processed successfully
+2020-06-04 23:00:24.971  INFO 3064 --- [http-nio-8080-exec-3] c.a.a.AuManagementApplication            : Request to get Company Names is received 
+2020-06-04 23:00:25.001  INFO 3064 --- [http-nio-8080-exec-3] c.a.a.AuManagementApplication            : Request to get Company names is processed successfully
+2020-06-04 23:01:50.546  INFO 3064 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to get Company Names is received 
+2020-06-04 23:01:50.873  INFO 3064 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to get Company names is processed successfully
+2020-06-04 23:01:59.923  INFO 3064 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to get Company Names is received 
+2020-06-04 23:01:59.928  INFO 3064 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to get Company names is processed successfully
+2020-06-04 23:02:58.720  INFO 3064 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to get Trends for company XYZ is received 
+2020-06-04 23:03:00.473  INFO 3064 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to get Trends company XYZ is processed successfully
+2020-06-04 23:05:17.153  INFO 3064 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to get Company Names is received 
+2020-06-04 23:05:17.227  INFO 3064 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to get Company names is processed successfully
+2020-06-04 23:05:43.548  INFO 3064 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to get Company Names is received 
+2020-06-04 23:05:43.970  INFO 3064 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to get Company names is processed successfully
+2020-06-04 23:07:12.823  INFO 3064 --- [http-nio-8080-exec-9] c.a.a.AuManagementApplication            : Request to get Company Names is received 
+2020-06-04 23:07:12.832  INFO 3064 --- [http-nio-8080-exec-9] c.a.a.AuManagementApplication            : Request to get Company names is processed successfully
+2020-06-04 23:07:41.621  INFO 3064 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to get Company Names is received 
+2020-06-04 23:07:41.626  INFO 3064 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to get Company names is processed successfully
+2020-06-04 23:21:17.035  INFO 3064 --- [http-nio-8080-exec-3] c.a.a.AuManagementApplication            : Request to get Company Names is received 
+2020-06-04 23:21:18.238  INFO 3064 --- [http-nio-8080-exec-3] c.a.a.AuManagementApplication            : Request to get Company names is processed successfully
+2020-06-04 23:21:26.355  INFO 3064 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to get Trends for company ABC is received 
+2020-06-04 23:21:26.589  INFO 3064 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to get Trends company ABC is processed successfully
+2020-06-04 23:26:13.870  INFO 3064 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to get Company Names is received 
+2020-06-04 23:26:13.875  INFO 3064 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to get Company names is processed successfully
+2020-06-04 23:26:27.348  INFO 3064 --- [http-nio-8080-exec-9] c.a.a.AuManagementApplication            : Request to get Trends for company ABC is received 
+2020-06-04 23:26:27.348  INFO 3064 --- [http-nio-8080-exec-9] c.a.a.AuManagementApplication            : Request to get Trends company ABC is processed successfully
+2020-06-04 23:27:01.306  INFO 3064 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to get Trends for company XYZ is received 
+2020-06-04 23:27:01.322  INFO 3064 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to get Trends company XYZ is processed successfully
+2020-06-04 23:32:08.358  INFO 3064 --- [http-nio-8080-exec-3] c.a.a.AuManagementApplication            : Request to get Company Names is received 
+2020-06-04 23:32:13.287  INFO 3064 --- [http-nio-8080-exec-3] c.a.a.AuManagementApplication            : Request to get Company names is processed successfully
+2020-06-04 23:32:29.704  INFO 3064 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to get Trends for company ABC is received 
+2020-06-04 23:32:30.048  INFO 3064 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to get Trends company ABC is processed successfully
+2020-06-04 23:32:36.696  INFO 3064 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to get Trends for company XYZ is received 
+2020-06-04 23:32:36.712  INFO 3064 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to get Trends company XYZ is processed successfully
+2020-06-04 23:32:40.997  INFO 3064 --- [http-nio-8080-exec-9] c.a.a.AuManagementApplication            : Request to get Trends for company ABC is received 
+2020-06-04 23:32:41.045  INFO 3064 --- [http-nio-8080-exec-9] c.a.a.AuManagementApplication            : Request to get Trends company ABC is processed successfully
+2020-06-04 23:32:44.767  INFO 3064 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to get Trends for company XYZ is received 
+2020-06-04 23:32:44.847  INFO 3064 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to get Trends company XYZ is processed successfully
+2020-06-04 23:32:47.886  INFO 3064 --- [http-nio-8080-exec-2] c.a.a.AuManagementApplication            : Request to get Trends for company ABC is received 
+2020-06-04 23:32:47.998  INFO 3064 --- [http-nio-8080-exec-2] c.a.a.AuManagementApplication            : Request to get Trends company ABC is processed successfully
+2020-06-04 23:33:21.291  INFO 3064 --- [http-nio-8080-exec-4] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 23:33:21.827  INFO 3064 --- [http-nio-8080-exec-4] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 23:34:55.789  INFO 3064 --- [http-nio-8080-exec-6] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 23:34:58.874  INFO 3064 --- [http-nio-8080-exec-6] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 23:35:59.443  INFO 3064 --- [http-nio-8080-exec-8] c.a.a.AuManagementApplication            : Request to get Company Names is received 
+2020-06-04 23:36:00.291  INFO 3064 --- [http-nio-8080-exec-8] c.a.a.AuManagementApplication            : Request to get Company names is processed successfully
+2020-06-04 23:36:29.969  INFO 3064 --- [http-nio-8080-exec-8] c.a.a.AuManagementApplication            : Request to get Company Names is received 
+2020-06-04 23:36:29.977  INFO 3064 --- [http-nio-8080-exec-8] c.a.a.AuManagementApplication            : Request to get Company names is processed successfully
+2020-06-04 23:36:49.132  INFO 3064 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to get Trends for company ABC is received 
+2020-06-04 23:36:49.179  INFO 3064 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to get Trends company ABC is processed successfully
+2020-06-04 23:36:51.776  INFO 3064 --- [http-nio-8080-exec-3] c.a.a.AuManagementApplication            : Request to get Trends for company XYZ is received 
+2020-06-04 23:36:51.792  INFO 3064 --- [http-nio-8080-exec-3] c.a.a.AuManagementApplication            : Request to get Trends company XYZ is processed successfully
+2020-06-04 23:38:07.389  INFO 3064 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to get Company Names is received 
+2020-06-04 23:38:07.405  INFO 3064 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to get Company names is processed successfully
+2020-06-04 23:38:16.854  INFO 3064 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to get Trends for company ABC is received 
+2020-06-04 23:38:16.862  INFO 3064 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to get Trends company ABC is processed successfully
+2020-06-04 23:38:22.646  INFO 3064 --- [http-nio-8080-exec-8] c.a.a.AuManagementApplication            : Request to get Trends for company XYZ is received 
+2020-06-04 23:38:22.803  INFO 3064 --- [http-nio-8080-exec-8] c.a.a.AuManagementApplication            : Request to get Trends company XYZ is processed successfully
+2020-06-04 23:42:23.394  INFO 3064 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to get Company Names is received 
+2020-06-04 23:42:23.466  INFO 3064 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to get Company names is processed successfully
+2020-06-04 23:46:30.325  INFO 3064 --- [http-nio-8080-exec-3] c.a.a.AuManagementApplication            : Request to get Trends for company ABC is received 
+2020-06-04 23:46:31.223  INFO 3064 --- [http-nio-8080-exec-3] c.a.a.AuManagementApplication            : Request to get Trends company ABC is processed successfully
+2020-06-04 23:48:22.723  INFO 3064 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to get Company Names is received 
+2020-06-04 23:48:31.355  INFO 3064 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to get Company names is processed successfully
+2020-06-04 23:48:42.949  INFO 3064 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to get Trends for company ABC is received 
+2020-06-04 23:48:43.277  INFO 3064 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to get Trends company ABC is processed successfully
+2020-06-04 23:48:50.654  INFO 3064 --- [http-nio-8080-exec-9] c.a.a.AuManagementApplication            : Request to get Trends for company XYZ is received 
+2020-06-04 23:48:50.983  INFO 3064 --- [http-nio-8080-exec-9] c.a.a.AuManagementApplication            : Request to get Trends company XYZ is processed successfully
+2020-06-04 23:49:07.156  INFO 3064 --- [http-nio-8080-exec-10] c.a.a.AuManagementApplication            : Request to get Trends for company ABC is received 
+2020-06-04 23:49:07.244  INFO 3064 --- [http-nio-8080-exec-10] c.a.a.AuManagementApplication            : Request to get Trends company ABC is processed successfully
+2020-06-04 23:50:05.861  INFO 3064 --- [http-nio-8080-exec-2] c.a.a.AuManagementApplication            : Request to get Company Names is received 
+2020-06-04 23:50:05.949  INFO 3064 --- [http-nio-8080-exec-2] c.a.a.AuManagementApplication            : Request to get Company names is processed successfully
+2020-06-04 23:50:28.496  INFO 3064 --- [http-nio-8080-exec-4] c.a.a.AuManagementApplication            : Request to get Trends for company ABC is received 
+2020-06-04 23:50:28.684  INFO 3064 --- [http-nio-8080-exec-4] c.a.a.AuManagementApplication            : Request to get Trends company ABC is processed successfully
+2020-06-04 23:50:34.142  INFO 3064 --- [http-nio-8080-exec-6] c.a.a.AuManagementApplication            : Request to get Trends for company XYZ is received 
+2020-06-04 23:50:34.142  INFO 3064 --- [http-nio-8080-exec-6] c.a.a.AuManagementApplication            : Request to get Trends company XYZ is processed successfully
+2020-06-04 23:50:53.252  INFO 3064 --- [http-nio-8080-exec-9] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 23:50:55.925  INFO 3064 --- [http-nio-8080-exec-9] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 23:51:04.985  INFO 3064 --- [http-nio-8080-exec-10] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 23:51:04.993  INFO 3064 --- [http-nio-8080-exec-10] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 23:51:07.062  INFO 3064 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to get Demands is received 
+2020-06-04 23:51:11.439  INFO 3064 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to get Demands is processed successfully
+2020-06-04 23:52:43.368  INFO 3064 --- [http-nio-8080-exec-6] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 23:52:43.400  INFO 3064 --- [http-nio-8080-exec-6] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 23:52:47.258  INFO 3064 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to add Employee with id 2 has been received 
+2020-06-04 23:52:54.074 ERROR 3064 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to add Employee with id 2 has been failed 
+2020-06-04 23:52:54.543  WARN 3064 --- [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.accolite.aumanagement.exception.CustomException: Cant Add the given employee ]
+2020-06-04 23:53:03.296  INFO 3064 --- [http-nio-8080-exec-10] c.a.a.AuManagementApplication            : Request to get Demands is received 
+2020-06-04 23:53:03.320  INFO 3064 --- [http-nio-8080-exec-8] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 23:53:03.384  INFO 3064 --- [http-nio-8080-exec-10] c.a.a.AuManagementApplication            : Request to get Demands is processed successfully
+2020-06-04 23:53:03.464  INFO 3064 --- [http-nio-8080-exec-8] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 23:53:14.825  INFO 3064 --- [http-nio-8080-exec-3] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 23:53:14.865  INFO 3064 --- [http-nio-8080-exec-3] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 23:53:42.740  INFO 3064 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to get Demands is received 
+2020-06-04 23:53:42.836  INFO 3064 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to get Demands is processed successfully
+2020-06-04 23:53:42.884  INFO 3064 --- [http-nio-8080-exec-6] c.a.a.AuManagementApplication            : Request to display Employee with id 2 has been received 
+2020-06-04 23:53:43.180  INFO 3064 --- [http-nio-8080-exec-6] c.a.a.AuManagementApplication            : Request to display Employee with id 2 has been succesfully processed 
+2020-06-04 23:54:01.079  INFO 3064 --- [http-nio-8080-exec-8] c.a.a.AuManagementApplication            : Request to update Employee with id 2 has been received 
+2020-06-04 23:54:01.199 ERROR 3064 --- [http-nio-8080-exec-8] c.a.a.AuManagementApplication            : Request to display Employee with id 2 has been failed 
+2020-06-04 23:54:01.231  WARN 3064 --- [http-nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.accolite.aumanagement.exception.CustomException: Can't update the employee]
+2020-06-04 23:54:17.312  INFO 3064 --- [http-nio-8080-exec-2] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 23:54:17.336  INFO 3064 --- [http-nio-8080-exec-2] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 23:54:22.294  INFO 3064 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to delete Employee with id 2 has been received 
+2020-06-04 23:54:22.550  INFO 3064 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to delete Employee with id 2 has been completed successfully 
+2020-06-04 23:54:28.046  INFO 3064 --- [http-nio-8080-exec-9] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 23:54:28.062  INFO 3064 --- [http-nio-8080-exec-9] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 23:54:32.954  INFO 3064 --- [http-nio-8080-exec-10] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 23:54:32.962  INFO 3064 --- [http-nio-8080-exec-8] c.a.a.AuManagementApplication            : Request to get Demands is received 
+2020-06-04 23:54:32.970  INFO 3064 --- [http-nio-8080-exec-8] c.a.a.AuManagementApplication            : Request to get Demands is processed successfully
+2020-06-04 23:54:32.994  INFO 3064 --- [http-nio-8080-exec-10] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 23:55:55.144  INFO 3064 --- [http-nio-8080-exec-3] c.a.a.AuManagementApplication            : Request to add Employee with id 3 has been received 
+2020-06-04 23:55:55.528  INFO 3064 --- [http-nio-8080-exec-3] c.a.a.AuManagementApplication            : Request to add Employee with id 3 has been succesfully completed 
+2020-06-04 23:56:05.402  INFO 3064 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 23:56:05.434  INFO 3064 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 23:56:12.054  INFO 3064 --- [http-nio-8080-exec-9] c.a.a.AuManagementApplication            : Request to get Demands is received 
+2020-06-04 23:56:12.070  INFO 3064 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to display Employee with id 3 has been received 
+2020-06-04 23:56:12.070  INFO 3064 --- [http-nio-8080-exec-9] c.a.a.AuManagementApplication            : Request to get Demands is processed successfully
+2020-06-04 23:56:12.110  INFO 3064 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to display Employee with id 3 has been succesfully processed 
+2020-06-04 23:56:15.366  INFO 3064 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 23:56:15.374  INFO 3064 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 23:56:20.164  INFO 3064 --- [http-nio-8080-exec-3] c.a.a.AuManagementApplication            : Request to display Employee with id 3 has been received 
+2020-06-04 23:56:20.188  INFO 3064 --- [http-nio-8080-exec-3] c.a.a.AuManagementApplication            : Request to display Employee with id 3 has been succesfully processed 
+2020-06-04 23:56:20.188  INFO 3064 --- [http-nio-8080-exec-4] c.a.a.AuManagementApplication            : Request to get Demands is received 
+2020-06-04 23:56:20.188  INFO 3064 --- [http-nio-8080-exec-4] c.a.a.AuManagementApplication            : Request to get Demands is processed successfully
+2020-06-04 23:56:42.138  INFO 3064 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to update Employee with id 3 has been received 
+2020-06-04 23:56:42.330  INFO 3064 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to update Employee with id 3 has been processed succesfully 
+2020-06-04 23:57:15.498  INFO 3064 --- [http-nio-8080-exec-8] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 23:57:15.530  INFO 3064 --- [http-nio-8080-exec-8] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 23:57:18.655  INFO 3064 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to display Employee with id 3 has been received 
+2020-06-04 23:57:18.671  INFO 3064 --- [http-nio-8080-exec-2] c.a.a.AuManagementApplication            : Request to get Demands is received 
+2020-06-04 23:57:18.743  INFO 3064 --- [http-nio-8080-exec-2] c.a.a.AuManagementApplication            : Request to get Demands is processed successfully
+2020-06-04 23:57:18.751  INFO 3064 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to display Employee with id 3 has been succesfully processed 
+2020-06-04 23:57:25.857  INFO 3064 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 23:57:25.897  INFO 3064 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 23:57:30.054  INFO 3064 --- [http-nio-8080-exec-9] c.a.a.AuManagementApplication            : Request to get Demands is received 
+2020-06-04 23:57:30.070  INFO 3064 --- [http-nio-8080-exec-9] c.a.a.AuManagementApplication            : Request to get Demands is processed successfully
+2020-06-04 23:57:30.062  INFO 3064 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to display Employee with id 3 has been received 
+2020-06-04 23:57:30.126  INFO 3064 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to display Employee with id 3 has been succesfully processed 
+2020-06-04 23:57:38.172  INFO 3064 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 23:57:38.196  INFO 3064 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 23:57:43.885  INFO 3064 --- [http-nio-8080-exec-4] c.a.a.AuManagementApplication            : Request to display Employee with id 3 has been received 
+2020-06-04 23:57:43.893  INFO 3064 --- [http-nio-8080-exec-3] c.a.a.AuManagementApplication            : Request to get Demands is received 
+2020-06-04 23:57:43.909  INFO 3064 --- [http-nio-8080-exec-3] c.a.a.AuManagementApplication            : Request to get Demands is processed successfully
+2020-06-04 23:57:43.933  INFO 3064 --- [http-nio-8080-exec-4] c.a.a.AuManagementApplication            : Request to display Employee with id 3 has been succesfully processed 
+2020-06-04 23:57:59.683  INFO 3064 --- [http-nio-8080-exec-9] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 23:57:59.763  INFO 3064 --- [http-nio-8080-exec-9] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 23:58:03.590  INFO 3064 --- [http-nio-8080-exec-8] c.a.a.AuManagementApplication            : Request to delete Employee with id 3 has been received 
+2020-06-04 23:58:03.718  INFO 3064 --- [http-nio-8080-exec-8] c.a.a.AuManagementApplication            : Request to delete Employee with id 3 has been completed successfully 
+2020-06-04 23:58:11.054  INFO 3064 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to display employees is received 
+2020-06-04 23:58:11.078  INFO 3064 --- [http-nio-8080-exec-1] c.a.a.AuManagementApplication            : Request to display employees is processed successfully
+2020-06-04 23:58:20.479  INFO 3064 --- [http-nio-8080-exec-3] c.a.a.AuManagementApplication            : Request to get Company Names is received 
+2020-06-04 23:58:20.511  INFO 3064 --- [http-nio-8080-exec-3] c.a.a.AuManagementApplication            : Request to get Company names is processed successfully
+2020-06-04 23:58:24.727  INFO 3064 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to get Trends for company ABC is received 
+2020-06-04 23:58:24.727  INFO 3064 --- [http-nio-8080-exec-7] c.a.a.AuManagementApplication            : Request to get Trends company ABC is processed successfully
+2020-06-04 23:58:27.468  INFO 3064 --- [http-nio-8080-exec-6] c.a.a.AuManagementApplication            : Request to get Trends for company XYZ is received 
+2020-06-04 23:58:27.468  INFO 3064 --- [http-nio-8080-exec-6] c.a.a.AuManagementApplication            : Request to get Trends company XYZ is processed successfully
+2020-06-04 23:58:32.109  INFO 3064 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to get Trends for company ABC is received 
+2020-06-04 23:58:32.125  INFO 3064 --- [http-nio-8080-exec-5] c.a.a.AuManagementApplication            : Request to get Trends company ABC is processed successfully

@@ -1,6 +1,7 @@
 package com.accolite.aumanagement.controller;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,6 +17,7 @@ import com.accolite.aumanagement.AuManagementApplication;
 import com.accolite.aumanagement.exception.CustomException;
 import com.accolite.aumanagement.model.Demand;
 import com.accolite.aumanagement.model.Employee;
+import com.accolite.aumanagement.model.Trends;
 import com.accolite.aumanagement.service.DemandServiceImpl;
 import com.accolite.aumanagement.service.EmployeeServiceImpl;
 
@@ -79,13 +81,13 @@ public class EmployeeController {
 	}
 	
 	@RequestMapping(method=RequestMethod.POST,value="/employees", consumes="application/json")
-	public String postEmployee(@RequestBody Employee t){
-		 //System.out.println(t.toString());
+	public void postEmployee(@RequestBody Employee t){
+		 
 		 try {
 			 logger.info("Request to add Employee with id "+t.getId()+" has been received ");
 			 service.postRequest(t);														// Post Request with Employee Details
 			 logger.info("Request to add Employee with id "+t.getId()+" has been succesfully completed ");
-			 return "Successfully Posted"+t.getId();
+			 
 		 }
 		 catch(Exception e)
 		 {
@@ -96,13 +98,13 @@ public class EmployeeController {
 	}
 	
 	@RequestMapping(method=RequestMethod.PUT,value="/employees/{id}", consumes="application/json")
-	public String putEmployee(@PathVariable String id ,@RequestBody Employee t){
+	public void putEmployee(@PathVariable String id ,@RequestBody Employee t){
 		System.out.println(t.toString());
 		try {
 			logger.info("Request to update Employee with id "+t.getId()+" has been received ");
 			service.putRequest(Integer.valueOf(id),t);														// Put Request with id ,Employee Details
 			logger.info("Request to update Employee with id "+t.getId()+" has been processed succesfully ");
-			return "Succesfully Updated"+id;
+			
 		}
 		catch(Exception e)
 		 {
@@ -113,12 +115,12 @@ public class EmployeeController {
 	}
 	
 	@RequestMapping(method=RequestMethod.DELETE,value="/employees/{id}")
-	public String deleteEmployee(@PathVariable String id){
+	public void deleteEmployee(@PathVariable String id){
 		 try{
 			 logger.info("Request to delete Employee with id "+id+" has been received ");
 			 service.deleteRequest(Integer.valueOf(id));													// Delete Request with id
 			 logger.info("Request to delete Employee with id "+id+" has been completed successfully ");
-			 return "Successfully Deleted id = "+id;
+			 
 		 }
 		 catch(Exception e)
 		 {
@@ -142,6 +144,42 @@ public class EmployeeController {
 			throw new CustomException("Can't find any demands now : ");
 		}
 		return employees;
+	}
+	
+	//Trends Mappings
+	@RequestMapping(method=RequestMethod.GET,value="/trends/{name}" )
+	public List<Trends> getTrends(@PathVariable String name){
+		List<Trends> trends;
+		
+		try {
+			logger.info("Request to get Trends for company "+name+" is received ");
+			trends= dService.getTrends(name);							// get request 
+			logger.info("Request to get Trends company "+name+" is processed successfully");
+		}
+		catch(Exception e) {
+			logger.error("Request to get Trends for company "+name+" has been failed ");
+			throw new CustomException("Can't find any trends now : ");
+		}
+		return trends;
+		
+	}
+	@RequestMapping(method=RequestMethod.GET,value="/trends" )
+	public List<String> getTrends(){
+		List<String> names;
+		
+		try {
+			logger.info("Request to get Company Names is received ");
+			names= dService.getCompanyNames()
+					.stream()
+					.map(p -> new String(p.getCompany_name()))
+					.collect(Collectors.toList());							// get request 
+			logger.info("Request to get Company names is processed successfully");
+		}
+		catch(Exception e) {
+			logger.error("Request to get Company names has been failed ");
+			throw new CustomException("Can't find any demands or company names now : ");
+		}
+		return names;
 	}
 
 }

@@ -35,9 +35,26 @@ public class DemandDaoTest {
 		demandDao.getTemplate().execute(
 				"INSERT INTO demand (demand_id, hiring_manager_id, company_name, location, skillset,"
 				+ " joining_date, status, posted_date) VALUES(0, 10, 'XYZ Services', 'Mumbai', 'Java',"
-				+ " '2019-11-15', 'open', '2019-10-14')"
+				+ " '2019-11-15', 'active', '2019-10-14')"
 				);
 		assertEquals(demandDao.getDemands().size(),1);
+	}
+	@Test
+	public void getTrends() {
+		demandDao.getTemplate().execute(
+				"INSERT INTO trends (company_name, count,year "
+				+") VALUES('XYZ', 10, 2020)"
+				);
+		assertEquals(demandDao.getTrends("XYZ").size(),1);
+	}
+	
+	@Test
+	public void getCompanyNames() {
+		demandDao.getTemplate().execute(
+				"INSERT INTO trends (company_name, count,year "
+						+") VALUES('XYZ', 10, 2020)"
+				);
+		assertEquals(demandDao.getCompanyNames().size(),1);
 	}
 
 }
