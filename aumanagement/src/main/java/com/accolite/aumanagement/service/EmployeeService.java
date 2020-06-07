@@ -7,6 +7,8 @@ public interface EmployeeService {
 	
 	public List<Employee> getRequest() ;
 
+	public List<Integer> getRequestForIds() ;
+	
 	public Employee getRequestWithId(int id) ;
 
 	public boolean postRequest(Employee t) ;

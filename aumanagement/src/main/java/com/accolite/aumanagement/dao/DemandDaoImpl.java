@@ -26,11 +26,6 @@ public class DemandDaoImpl implements DemandDao {
 		this.template = template;
 	}
 
-//SELECT company_name , required_employee_count , YEAR(posted_date) as year FROM demand JOIN hiring_manager ON id = hiring_manager_id GROUP BY year,company_name
-//SELECT company_name ,sum(required_employee_count) , YEAR(posted_date) as year FROM demand JOIN hiring_manager ON id = hiring_manager_id GROUP BY year,company_name
-//SELECT * FROM `trends` WHERE company_name = "XYZ"
-//SELECT DISTINCT company_name FROM `trends`
-
 	@Override
 	public List<Demand> getDemands() {
 		String query = "SELECT * FROM demand WHERE status = 'active'";

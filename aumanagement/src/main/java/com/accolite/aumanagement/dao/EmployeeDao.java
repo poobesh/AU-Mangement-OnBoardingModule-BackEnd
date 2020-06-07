@@ -6,7 +6,9 @@ import com.accolite.aumanagement.model.Employee;
 
 public interface EmployeeDao {
 	
-	public List<Employee> getAllEmployees();
+	 public List<Employee> getAllEmployees();
+	 
+	 public List<Integer> getAllEmployeesIds();
 	 
 	 public Employee findEmployeeById(int id);
 	 

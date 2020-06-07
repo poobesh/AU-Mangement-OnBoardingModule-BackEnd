@@ -25,7 +25,7 @@ public class EmployeeDaoImpl implements EmployeeDao{
 
 	@Override
 	public List<Employee> getAllEmployees() {
-		String query = "SELECT * from employee";
+		String query = "SELECT * from employee WHERE status = true ";
 		RowMapper<Employee> rowMapper = new EmployeeRowMapper();
 		List<Employee> list;
 		
@@ -134,7 +134,7 @@ public class EmployeeDaoImpl implements EmployeeDao{
 	@Override
 	public boolean deleteEmployee(int id) {
 		try {
-			String query = "DELETE FROM `employee_constant` WHERE id = ?" ;
+			String query = "UPDATE `employee_constant` SET status = false WHERE id = ?" ;
 			template.update(query, id);
 		}
 		catch(Exception e)
@@ -169,6 +169,24 @@ public class EmployeeDaoImpl implements EmployeeDao{
 
 	public void setTemplate(JdbcTemplate template) {
 		this.template = template;
+	}
+
+
+
+	@Override
+	public List<Integer> getAllEmployeesIds() {
+		String query = "SELECT id from employee_constant ";
+		
+		List<Integer> list;
+		
+		list = template.queryForList(query, null,Integer.class);
+		
+		if(list.isEmpty())
+		{
+			throw new CustomException("No employees are present ");
+		}
+		else
+		return list;
 	}
 	
 	

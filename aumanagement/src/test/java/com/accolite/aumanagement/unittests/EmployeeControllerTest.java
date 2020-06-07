@@ -50,6 +50,11 @@ public class EmployeeControllerTest {
 		Mockito.when(employeeService.getRequest()).thenReturn(list);
 		assertEquals(employeeController.getEmployees().size(),2);
 	}
+	@Test
+	public void getAllEmployeesIds() {
+		Mockito.when(employeeService.getRequestForIds()).thenReturn(Arrays.asList(1,2));
+		assertEquals(employeeController.getEmployeesIds().size(),2);
+	}
 	
 	@Test
 	public void getEmployeeById() {

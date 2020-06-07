@@ -56,6 +56,14 @@ public class EmployeeDaoTest {
 		employee.setIfsc_code("PNB123");
 		employee.setBranch("DPI");
 		
+		employeeDao.getTemplate().execute(
+				"Insert into employee (id ,email ,version ,first_name ,last_name ,dob ,blood_type ,gender ,date_of_joining ,permanent_address ,permanent_pincode ,"
+				+ "pan_number ,skill_1 ,skill_2 ,skill_3 ,status ,experience ,phone_number ,current_address ,current_pincode ,BGC ,designation ,demand_id ,ac_no,"
+				+ "ifsc_code,name,branch ) values (1,'p@c.m',0,'Ram','Ragu',"+ null +",'O','male',"+ null +",'permanent address',123,'100PP6748A',"
+				+ "'Angular','python','C',true,0,98765489,'Current address',456,true,'SDE',3,123456,'PNB006','Ram','PNB') "
+
+								);
+		
 	}
 	
 	@Test
@@ -64,52 +72,30 @@ public class EmployeeDaoTest {
 	}
 	@Test
 	public void updateEmployee() {
-		employeeDao.getTemplate().execute(
-				"Insert into employee (id ,email ,version ,first_name ,last_name ,dob ,blood_type ,gender ,date_of_joining ,permanent_address ,permanent_pincode ,"
-				+ "pan_number ,skill_1 ,skill_2 ,skill_3 ,status ,experience ,phone_number ,current_address ,current_pincode ,BGC ,designation ,demand_id ,ac_no,"
-				+ "ifsc_code,name,branch ) values (1,'p@c.m',0,'Ram','Ragu',"+ null +",'O','male',"+ null +",'permanent address',123,'100PP6748A',"
-				+ "'Angular','python','C',true,0,98765489,'Current address',456,true,'SDE',3,123456,'PNB006','Ram','PNB') "
-
-								);
-		employeeDao.addEmployee(employee);
-		
 		assertTrue(employeeDao.updateEmployee(1, employee));
 	}
 	
 	@Test
 	public void GetEmployeeById() {
-		
-		employeeDao.getTemplate().execute(
-"Insert into employee (id ,email ,version ,first_name ,last_name ,dob ,blood_type ,gender ,date_of_joining ,permanent_address ,permanent_pincode ,"
-+ "pan_number ,skill_1 ,skill_2 ,skill_3 ,status ,experience ,phone_number ,current_address ,current_pincode ,BGC ,designation ,demand_id ,ac_no,"
-+ "ifsc_code,name,branch ) values (1,'p100@c.c',0,'Ram','Ragu',"+ null +",'O','male',"+ null +",'permanent address',123,'100PP6748A',"
-+ "'Angular','python','C',true,0,98765489,'Current address',456,true,'SDE',3,123456,'PNB006','Ram','PNB') "
-
-				);
 		assertEquals(employeeDao.findEmployeeById(1),employee);
 	}
 	
 	@Test
 	public void getEmployees() {
-		employeeDao.getTemplate().execute(
-				"Insert into employee (id ,email ,version ,first_name ,last_name ,dob ,blood_type ,gender ,date_of_joining ,permanent_address ,permanent_pincode ,"
-				+ "pan_number ,skill_1 ,skill_2 ,skill_3 ,status ,experience ,phone_number ,current_address ,current_pincode ,BGC ,designation ,demand_id ,ac_no,"
-				+ "ifsc_code,name,branch ) values (1,'p100@c.c',0,'Ram','Ragu',"+ null +",'O','male',"+ null +",'permanent address',123,'100PP6748A',"
-				+ "'Angular','python','C',true,0,98765489,'Current address',456,true,'SDE',3,123456,'PNB006','Ram','PNB') "
-
-								);
 		assertEquals(employeeDao.getAllEmployees().size(),1);
 	}
 	
 	@Test
 	public void deleteEmployee() {
-		employeeDao.getTemplate().execute(
-				"Insert into employee (id ,email ,version ,first_name ,last_name ,dob ,blood_type ,gender ,date_of_joining ,permanent_address ,permanent_pincode ,"
-				+ "pan_number ,skill_1 ,skill_2 ,skill_3 ,status ,experience ,phone_number ,current_address ,current_pincode ,BGC ,designation ,demand_id ,ac_no,"
-				+ "ifsc_code,name,branch ) values (1,'p100@c.c',0,'Ram','Ragu',"+ null +",'O','male',"+ null +",'permanent address',123,'100PP6748A',"
-				+ "'Angular','python','C',true,0,98765489,'Current address',456,true,'SDE',3,123456,'PNB006','Ram','PNB') "
-				);
         assertTrue(employeeDao.deleteEmployee(1));
 		
 	}
+	@Test
+	public void getEmployeeIds() {
+		employeeDao.getTemplate().execute("Insert into employee_constant (id , first_name , last_name , email ,dob , blood_type , gender , date_of_joining , permanent_address , pincode , pan_number , version ,status ) values (100,'Ram','Kumar','ram@123.com','1999-03-03','o','Male','2020-03-03','permanent',7890,'DHJIUYR',0,false)");
+		assertEquals(employeeDao.getAllEmployeesIds().size(),1);
+	
+	}
+	
+	
 }

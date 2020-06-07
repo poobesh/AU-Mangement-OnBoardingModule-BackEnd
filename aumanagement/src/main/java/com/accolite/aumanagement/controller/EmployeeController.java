@@ -61,6 +61,21 @@ public class EmployeeController {
 		}
 		return employees;
 	}
+	@RequestMapping(method=RequestMethod.GET,value="/employees/ids", produces="application/json")
+	public List<Integer> getEmployeesIds(){
+		List<Integer> ids;
+		
+		try {
+			logger.info("Request to display employees Ids is received ");
+			ids= service.getRequestForIds();							// get request 
+			logger.info("Request to display employees Ids is processed successfully");
+		}
+		catch(Exception e) {
+			logger.error("Request to display employees Ids has been failed ");
+			throw new CustomException("Can't find any employees : ");
+		}
+		return ids;
+	}
 	
 	
 	@RequestMapping(method=RequestMethod.GET,value="/employees/{id}", produces="application/json")
@@ -132,18 +147,18 @@ public class EmployeeController {
 	// Request Mappings for Demands :
 	@RequestMapping(method=RequestMethod.GET,value="/demands" )
 	public List<Demand> getDemands(){
-		List<Demand> employees;
+		List<Demand> demand;
 		
 		try {
 			logger.info("Request to get Demands is received ");
-			employees= dService.getDemands();							// get request 
+			demand= dService.getDemands();							// get request 
 			logger.info("Request to get Demands is processed successfully");
 		}
 		catch(Exception e) {
 			logger.error("Request to get Demands has been failed ");
 			throw new CustomException("Can't find any demands now : ");
 		}
-		return employees;
+		return demand;
 	}
 	
 	//Trends Mappings

@@ -2,6 +2,8 @@ package com.accolite.aumanagement.model;
 
 import java.sql.Date;
 
+
+
 public class Employee {
 	int id;
 	String email;
@@ -327,6 +329,9 @@ public class Employee {
 				+ ", designation=" + designation + ", demand_id=" + demand_id + ", bank_ac_no=" + bank_ac_no
 				+ ", ifsc_code=" + ifsc_code + ", name=" + name + ", branch=" + branch + "]";
 	}
+
+
+
 	
 	
 

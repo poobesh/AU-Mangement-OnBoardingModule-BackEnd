@@ -57,7 +57,12 @@ public class EmployeeServiceTest {
 		assertEquals(list,employeeService.getRequest());
 		verify(employeeDao).getAllEmployees();
 	}
-	
+	@Test
+	public void getListOfEmployeesIds() {
+		when(employeeDao.getAllEmployeesIds()).thenReturn(Arrays.asList(1,2));
+		assertEquals(Arrays.asList(1,2),employeeService.getRequestForIds());
+		
+	}
 	@Test
 	public void getEmployeeForGivenId() {
 		Mockito.when(employeeDao.findEmployeeById(Mockito.anyInt())).thenReturn(employee);

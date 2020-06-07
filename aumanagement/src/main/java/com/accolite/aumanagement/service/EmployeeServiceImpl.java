@@ -50,6 +50,11 @@ public class EmployeeServiceImpl implements EmployeeService {
 		this.employeeDao = employeeDao;
 	}
 
+	@Override
+	public List<Integer> getRequestForIds() {
+		return employeeDao.getAllEmployeesIds();
+	}
+
 	
 
 	
