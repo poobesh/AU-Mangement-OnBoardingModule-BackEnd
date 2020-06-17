@@ -8,7 +8,6 @@ public class ErrorMessage {
 	private String details;
 	private String httpCodeMessage;
 	
-	
 	public ErrorMessage(Date date, String message, String details, String httpCodeMessage) {
 		super();
 		this.date = date;
@@ -17,16 +16,13 @@ public class ErrorMessage {
 		this.httpCodeMessage = httpCodeMessage;
 	}
 
-	
 	public String getHttpCodeMessage() {
 		return httpCodeMessage;
 	}
 
-
 	public void setHttpCodeMessage(String httpCodeMessage) {
 		this.httpCodeMessage = httpCodeMessage;
 	}
-
 
 	public Date getDate() {
 		return date;

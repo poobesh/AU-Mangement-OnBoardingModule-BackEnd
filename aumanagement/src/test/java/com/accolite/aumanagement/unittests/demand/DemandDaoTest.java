@@ -1,4 +1,4 @@
-package com.accolite.aumanagement.unittests;
+package com.accolite.aumanagement.unittests.demand;
 
 import static org.junit.Assert.assertEquals;
 
@@ -20,6 +20,7 @@ public class DemandDaoTest {
 	
 	Demand demand;
 	DemandDaoImpl demandDao;
+	
 	@Before
 	public void setUp() {
 		DataSource dataSource = new EmbeddedDatabaseBuilder().setType(EmbeddedDatabaseType.H2)
@@ -39,6 +40,7 @@ public class DemandDaoTest {
 				);
 		assertEquals(demandDao.getDemands().size(),1);
 	}
+	
 	@Test
 	public void getTrends() {
 		demandDao.getTemplate().execute(

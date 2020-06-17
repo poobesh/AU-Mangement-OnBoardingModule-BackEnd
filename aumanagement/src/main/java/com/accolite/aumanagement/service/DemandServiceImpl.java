@@ -15,6 +15,7 @@ public class DemandServiceImpl implements DemandService{
 	
 	@Autowired
 	DemandDao demandDao;
+	
 	public DemandServiceImpl(DemandDaoImpl dao) {
 		this.demandDao = dao;
 	}

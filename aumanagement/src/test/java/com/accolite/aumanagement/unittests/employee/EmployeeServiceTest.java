@@ -1,4 +1,4 @@
-package com.accolite.aumanagement.unittests;
+package com.accolite.aumanagement.unittests.employee;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -34,12 +34,9 @@ public class EmployeeServiceTest {
 
 	EmployeeServiceImpl employeeService = null;
 	
-	
 	// new Employee 
 	Employee employee;
 	List<Employee> list;
-	
-	
 	
 	@Before
 	public void setUp() {
@@ -48,21 +45,21 @@ public class EmployeeServiceTest {
 		Employee[] a = new Employee[] {employee};
 		list = Arrays.asList(a);
 	}
-	
-	
-	
+		
 	@Test
 	public void getListOfEmployees() {
 		when(employeeDao.getAllEmployees()).thenReturn(list);
 		assertEquals(list,employeeService.getRequest());
 		verify(employeeDao).getAllEmployees();
 	}
+	
 	@Test
 	public void getListOfEmployeesIds() {
 		when(employeeDao.getAllEmployeesIds()).thenReturn(Arrays.asList(1,2));
 		assertEquals(Arrays.asList(1,2),employeeService.getRequestForIds());
 		
 	}
+	
 	@Test
 	public void getEmployeeForGivenId() {
 		Mockito.when(employeeDao.findEmployeeById(Mockito.anyInt())).thenReturn(employee);
@@ -71,11 +68,12 @@ public class EmployeeServiceTest {
 	
 	@Test
 	public void postEmployee() {
-		//assertThrows();
+		
 		Mockito.when(employeeDao.addEmployee(new Employee(1,"Raman"))).thenReturn(true);
 		assertTrue(employeeService.postRequest(new Employee(1,"Raman")));
 		
 	}
+	
 	@Test(expected = CustomException.class)
 	public void postEmployeeError() {
 		Mockito.when(employeeDao.addEmployee(new Employee())).thenThrow(new CustomException("Cant Add the given employee "));
@@ -83,8 +81,6 @@ public class EmployeeServiceTest {
 		
 	}
 	
-	//new CustomException("Can't update the employee")
-	//
 	
 	@Test
 	public void updateEmployee() {
@@ -105,6 +101,7 @@ public class EmployeeServiceTest {
 		Mockito.when(employeeDao.deleteEmployee(Mockito.anyInt())).thenReturn(true);
 		assertTrue(employeeService.deleteRequest(1));
 	}
+	
 	@Test(expected = CustomException.class)
 	public void deleteEmployeeError() {
 		Mockito.when(employeeDao.deleteEmployee(Mockito.anyInt())).thenThrow(new CustomException("Can't Delete Employee "));

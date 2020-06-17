@@ -17,6 +17,4 @@ public interface EmployeeService {
 
 	public boolean deleteRequest(int id) ;
    
-	
-
 }

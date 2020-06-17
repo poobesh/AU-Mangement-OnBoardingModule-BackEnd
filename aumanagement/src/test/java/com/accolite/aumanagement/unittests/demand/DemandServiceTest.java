@@ -1,4 +1,4 @@
-package com.accolite.aumanagement.unittests;
+package com.accolite.aumanagement.unittests.demand;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.when;
@@ -34,7 +34,6 @@ public class DemandServiceTest {
 	List<Demand> list;
 	List<Trends> trends;
 	
-	
 	@Before
 	public void setUp() {
 		demandService = new DemandServiceImpl(demandDao);
@@ -43,20 +42,21 @@ public class DemandServiceTest {
 		trends.get(0).setCompany_name("XYZ");
 	}
 	
-	
-	
 	@Test
 	public void getListOfDemands() {
+	
 		when(demandDao.getDemands()).thenReturn(list);
 		assertEquals(list,demandService.getDemands());
 		
 	}
+	
 	@Test
 	public void getListOfTrends() {
 		when(demandDao.getTrends("XYZ")).thenReturn(trends);
 		assertEquals(trends,demandService.getTrends("XYZ"));
 		
 	}
+	
 	@Test
 	public void getListOfCompanies() {
 		when(demandDao.getCompanyNames()).thenReturn(trends);

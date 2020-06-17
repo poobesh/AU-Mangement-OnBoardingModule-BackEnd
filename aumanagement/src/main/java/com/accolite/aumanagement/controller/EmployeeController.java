@@ -1,7 +1,6 @@
 package com.accolite.aumanagement.controller;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,10 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.accolite.aumanagement.AuManagementApplication;
 import com.accolite.aumanagement.exception.CustomException;
-import com.accolite.aumanagement.model.Demand;
 import com.accolite.aumanagement.model.Employee;
-import com.accolite.aumanagement.model.Trends;
-import com.accolite.aumanagement.service.DemandServiceImpl;
 import com.accolite.aumanagement.service.EmployeeServiceImpl;
 
 @CrossOrigin(origins = "*")
@@ -26,28 +22,24 @@ import com.accolite.aumanagement.service.EmployeeServiceImpl;
 public class EmployeeController {
 	
 	@Autowired
-	EmployeeServiceImpl service ;
+	EmployeeServiceImpl service ; // For Employee Related Functions
 	
-	@Autowired
-	DemandServiceImpl dService;
 	
 	final Logger logger = LoggerFactory.getLogger(AuManagementApplication.class);
-	
-	
 
+	// Constructors
 	public EmployeeController() {
 		super();
 	}
 	public EmployeeController(EmployeeServiceImpl employeeService) {
 		this.service = employeeService;
 	}
-	public EmployeeController(DemandServiceImpl service) {
-		this.dService = service;
-	}
+	
 
 
 	@RequestMapping(method=RequestMethod.GET,value="/employees", produces="application/json")
-	public List<Employee> getEmployees(){
+	public List<Employee> getEmployees() {
+		
 		List<Employee> employees;
 		
 		try {
@@ -61,8 +53,10 @@ public class EmployeeController {
 		}
 		return employees;
 	}
+	
 	@RequestMapping(method=RequestMethod.GET,value="/employees/ids", produces="application/json")
-	public List<Integer> getEmployeesIds(){
+	public List<Integer> getEmployeesIds() {
+		
 		List<Integer> ids;
 		
 		try {
@@ -77,11 +71,11 @@ public class EmployeeController {
 		return ids;
 	}
 	
-	
 	@RequestMapping(method=RequestMethod.GET,value="/employees/{id}", produces="application/json")
-	public Employee getEmployee(@PathVariable String id){
+	public Employee getEmployee(@PathVariable String id) {
 		
 		Employee employee  ;
+		
 		try {
 			logger.info("Request to display Employee with id "+id+" has been received ");
 			employee = service.getRequestWithId(Integer.valueOf(id));									// Get Request by Id 
@@ -96,7 +90,7 @@ public class EmployeeController {
 	}
 	
 	@RequestMapping(method=RequestMethod.POST,value="/employees", consumes="application/json")
-	public void postEmployee(@RequestBody Employee t){
+	public void postEmployee(@RequestBody Employee t) {
 		 
 		 try {
 			 logger.info("Request to add Employee with id "+t.getId()+" has been received ");
@@ -113,8 +107,10 @@ public class EmployeeController {
 	}
 	
 	@RequestMapping(method=RequestMethod.PUT,value="/employees/{id}", consumes="application/json")
-	public void putEmployee(@PathVariable String id ,@RequestBody Employee t){
+	public void putEmployee(@PathVariable String id ,@RequestBody Employee t) {
+		
 		System.out.println(t.toString());
+		
 		try {
 			logger.info("Request to update Employee with id "+t.getId()+" has been received ");
 			service.putRequest(Integer.valueOf(id),t);														// Put Request with id ,Employee Details
@@ -130,7 +126,8 @@ public class EmployeeController {
 	}
 	
 	@RequestMapping(method=RequestMethod.DELETE,value="/employees/{id}")
-	public void deleteEmployee(@PathVariable String id){
+	public void deleteEmployee(@PathVariable String id) {
+		
 		 try{
 			 logger.info("Request to delete Employee with id "+id+" has been received ");
 			 service.deleteRequest(Integer.valueOf(id));													// Delete Request with id
@@ -144,57 +141,6 @@ public class EmployeeController {
 		 }
 	}
 	
-	// Request Mappings for Demands :
-	@RequestMapping(method=RequestMethod.GET,value="/demands" )
-	public List<Demand> getDemands(){
-		List<Demand> demand;
-		
-		try {
-			logger.info("Request to get Demands is received ");
-			demand= dService.getDemands();							// get request 
-			logger.info("Request to get Demands is processed successfully");
-		}
-		catch(Exception e) {
-			logger.error("Request to get Demands has been failed ");
-			throw new CustomException("Can't find any demands now : ");
-		}
-		return demand;
-	}
-	
-	//Trends Mappings
-	@RequestMapping(method=RequestMethod.GET,value="/trends/{name}" )
-	public List<Trends> getTrends(@PathVariable String name){
-		List<Trends> trends;
-		
-		try {
-			logger.info("Request to get Trends for company "+name+" is received ");
-			trends= dService.getTrends(name);							// get request 
-			logger.info("Request to get Trends company "+name+" is processed successfully");
-		}
-		catch(Exception e) {
-			logger.error("Request to get Trends for company "+name+" has been failed ");
-			throw new CustomException("Can't find any trends now : ");
-		}
-		return trends;
-		
-	}
-	@RequestMapping(method=RequestMethod.GET,value="/trends" )
-	public List<String> getTrends(){
-		List<String> names;
-		
-		try {
-			logger.info("Request to get Company Names is received ");
-			names= dService.getCompanyNames()
-					.stream()
-					.map(p -> new String(p.getCompany_name()))
-					.collect(Collectors.toList());							// get request 
-			logger.info("Request to get Company names is processed successfully");
-		}
-		catch(Exception e) {
-			logger.error("Request to get Company names has been failed ");
-			throw new CustomException("Can't find any demands or company names now : ");
-		}
-		return names;
-	}
+
 
 }

@@ -13,6 +13,7 @@ public class Demand {
 		this.demand_id = demand_id;
 		this.skill = skill;
 	}
+	
 	public int getDemand_id() {
 		return demand_id;
 	}

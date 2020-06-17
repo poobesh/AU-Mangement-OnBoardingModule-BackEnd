@@ -3,7 +3,6 @@ package com.accolite.aumanagement.model;
 import java.sql.Date;
 
 
-
 public class Employee {
 	int id;
 	String email;
@@ -38,19 +37,13 @@ public class Employee {
 		super();
 		
 	}
-	
-	
-	
+		
 	public Employee(int id, String first_name) {
 		super();
 		this.id = id;
 		this.first_name = first_name;
 	}
 	
-	
-
-
-
 	public Employee(int id, String first_name ,String email,String pan_number) {
 		super();
 		this.id = id;
@@ -81,8 +74,6 @@ public class Employee {
 		this.name = first_name;
 		this.branch = "PNB Branch";
 	}
-
-
 
 	public int getId() {
 		return id;
@@ -205,92 +196,48 @@ public class Employee {
 	public void setDemand_id(int demand_id) {
 		this.demand_id = demand_id;
 	}
-
-
-
 	public String getSkill_1() {
 		return skill_1;
 	}
-
-
-
 	public void setSkill_1(String skill_1) {
 		this.skill_1 = skill_1;
 	}
-
-
-
 	public String getSkill_2() {
 		return skill_2;
 	}
-
-
-
 	public void setSkill_2(String skill_2) {
 		this.skill_2 = skill_2;
 	}
-
-
-
 	public String getSkill_3() {
 		return skill_3;
 	}
-
-
-
 	public void setSkill_3(String skill_3) {
 		this.skill_3 = skill_3;
 	}
-
-
-
 	public boolean isStatus() {
 		return status;
 	}
-
-
-
 	public void setStatus(boolean status) {
 		this.status = status;
 	}
-
-
-
 	public String getIfsc_code() {
 		return ifsc_code;
 	}
-
-
-
 	public void setIfsc_code(String ifsc_code) {
 		this.ifsc_code = ifsc_code;
 	}
-
-
-
 	public String getName() {
 		return name;
 	}
-
-
-
 	public void setName(String name) {
 		this.name = name;
 	}
-
-
-
 	public String getBranch() {
 		return branch;
 	}
-
-
-
 	public void setBranch(String branch) {
 		this.branch = branch;
 	}
-
-
 
 	@Override
 	public int hashCode() {
@@ -299,8 +246,6 @@ public class Employee {
 		result = prime * result + id;
 		return result;
 	}
-
-
 
 	@Override
 	public boolean equals(Object obj) {
@@ -316,8 +261,6 @@ public class Employee {
 		return true;
 	}
 
-
-
 	@Override
 	public String toString() {
 		return "Employee [id=" + id + ", email=" + email + ", version=" + version + ", first_name=" + first_name
@@ -330,12 +273,5 @@ public class Employee {
 				+ ", ifsc_code=" + ifsc_code + ", name=" + name + ", branch=" + branch + "]";
 	}
 
-
-
 	
-	
-
-	
-	
-
 }

@@ -6,6 +6,18 @@ CREATE TABLE bank_details (
   branch varchar(30) NOT NULL
 )  ;
 
+DROP TABLE IF EXISTS authorized_users;
+CREATE TABLE authorized_users (
+  email varchar(30) NOT NULL
+)  ;
+
+DROP TABLE IF EXISTS log_files;
+CREATE TABLE log_files (
+  date date,
+  file Blob
+)  ;
+
+
 DROP TABLE IF EXISTS  trends;
 CREATE TABLE trends (
   company_name varchar(30) NOT NULL,
@@ -139,6 +151,12 @@ CREATE TABLE skill (
   skill_3 varchar(30) NOT NULL
 ) ;
 
+DROP TABLE IF EXISTS hiring_manager;
+CREATE TABLE hiring_manager (
+  id int(11),
+  employees_assigned int(11)
+) ;
+
 DROP TABLE IF EXISTS demand;
 CREATE TABLE demand (
   demand_id int(11) NOT NULL,
@@ -146,9 +164,9 @@ CREATE TABLE demand (
   company_name varchar(30) NOT NULL,
   location varchar(15) NOT NULL,
   skillset varchar(30) NOT NULL,
-  joining_date date NOT NULL,
+  joining_date date ,
   status varchar(6) NOT NULL,
-  posted_date date NOT NULL
+  posted_date date 
 );
 
 

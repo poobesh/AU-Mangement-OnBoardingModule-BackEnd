@@ -9,22 +9,41 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 import com.accolite.aumanagement.model.Employee;
-import com.accolite.aumanagement.model.EmployeeRowMapper;
+import com.accolite.aumanagement.rowmappers.EmployeeRowMapper;
 import com.accolite.aumanagement.exception.*;
 
 /**
  * @author Sathish-PC
  *
  */
+
 @Repository
 public class EmployeeDaoImpl implements EmployeeDao{
 	
-	
 	@Autowired
     JdbcTemplate template;
+	
+	
+	public EmployeeDaoImpl() {
+		super();
+	}
+	public EmployeeDaoImpl(JdbcTemplate template) {
+		super();
+		this.template = template;
+	}
+	
+	public JdbcTemplate getTemplate() {
+		return template;
+	}
 
+	public void setTemplate(JdbcTemplate template) {
+		this.template = template;
+	}
+
+	
 	@Override
 	public List<Employee> getAllEmployees() {
+		
 		String query = "SELECT * from employee WHERE status = true ";
 		RowMapper<Employee> rowMapper = new EmployeeRowMapper();
 		List<Employee> list;
@@ -35,15 +54,15 @@ public class EmployeeDaoImpl implements EmployeeDao{
 		{
 			throw new CustomException("No employees are present ");
 		}
-		else
-		return list;
+		else {
+			return list;
+		}
 		
 	}
 	
-	
-
 	@Override
 	public Employee findEmployeeById(int id) {
+		
 		try {
 			String query = "SELECT * FROM employee WHERE id = ?";
 			RowMapper<Employee> rowMapper = new BeanPropertyRowMapper<Employee>(Employee.class);
@@ -59,22 +78,28 @@ public class EmployeeDaoImpl implements EmployeeDao{
 	@Override
 	public boolean addEmployee(Employee employee) {
 		
-		try {
-		String query1 = "INSERT INTO `employee_constant`(`id`, `first_name`, `last_name`, `email`, `dob`, `blood_type`, `gender`, `date_of_joining`, `permanent_address`, `pincode`, `pan_number`, `version`) VALUES (? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? )";
-		template.update(query1, employee.getId(), employee.getFirst_name(), employee.getLast_name(), employee.getEmail(), employee.getDob(), employee.getBlood_type(), employee.getGender() ,employee.getDate_of_joining() , employee.getPermanent_address() , employee.getP_pincode() , employee.getPan_number(), 0 );
+		try {		
 		
-		//update Employee Editable tables
-		String query2 = "INSERT INTO `employee_editable`(`emailversion`, `experience`, `phone_number`, `current_address`, `pincode`, `BGC`, `designation`, `bank_ac_no`, `demand_id`) VALUES (? ,? , ? ,? ,? ,? ,? , ? ,? )";
-		template.update(query2, employee.getEmail().concat("0"), employee.getExperience(), employee.getPhone_number(), employee.getCurrent_address() , employee.getC_pincode(), employee.getBGC(), employee.getDesignation(), employee.getBank_ac_no() , employee.getDemand_id());
-													// Initially version is 0
-		//update bank details
-		String query3 = "INSERT INTO `bank_details`(`ac_no`, `ifsc_code`, `name`, `branch`) VALUES (? ,? ,? ,?)";
-		template.update(query3, employee.getBank_ac_no(),employee.getIfsc_code(),employee.getName(),employee.getBranch());
-		
-		//update Skill Details
-		String query4 = "INSERT INTO `skill`(`pan_number`, `skill_1`, `skill_2`, `skill_3`) VALUES (? , ? ,? , ? )";
-		template.update(query4, employee.getPan_number(),employee.getSkill_1(),employee.getSkill_2(),employee.getSkill_3());
-				
+			// ADD primary details to Employee_constant table
+			String query1 = "INSERT INTO `employee_constant`(`id`, `first_name`, `last_name`, `email`, `dob`, `blood_type`, `gender`, `date_of_joining`, `permanent_address`, `pincode`, `pan_number`, `version`) VALUES (? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? )";
+			template.update(query1, employee.getId(), employee.getFirst_name(), employee.getLast_name(), employee.getEmail(), employee.getDob(), employee.getBlood_type(), employee.getGender() ,employee.getDate_of_joining() , employee.getPermanent_address() , employee.getP_pincode() , employee.getPan_number(), 0 );
+			
+			//ADD  editable details to Employee Editable tables ( Initially version is 0 )
+			String query2 = "INSERT INTO `employee_editable`(`emailversion`, `experience`, `phone_number`, `current_address`, `pincode`, `BGC`, `designation`, `bank_ac_no`, `demand_id`) VALUES (? ,? , ? ,? ,? ,? ,? , ? ,? )";
+			template.update(query2, employee.getEmail().concat("0"), employee.getExperience(), employee.getPhone_number(), employee.getCurrent_address() , employee.getC_pincode(), employee.getBGC(), employee.getDesignation(), employee.getBank_ac_no() , employee.getDemand_id());
+														
+			//ADD bank details in Bank_details table 
+			String query3 = "INSERT INTO `bank_details`(`ac_no`, `ifsc_code`, `name`, `branch`) VALUES (? ,? ,? ,?)";
+			template.update(query3, employee.getBank_ac_no(),employee.getIfsc_code(),employee.getName(),employee.getBranch());
+			
+			//ADD Skill Details
+			String query4 = "INSERT INTO `skill`(`pan_number`, `skill_1`, `skill_2`, `skill_3`) VALUES (? , ? ,? , ? )";
+			template.update(query4, employee.getPan_number(),employee.getSkill_1(),employee.getSkill_2(),employee.getSkill_3());
+			
+			//Increase assigned employees count 
+			String query5 = "UPDATE hiring_manager SET employees_assigned = employees_assigned + 1 WHERE id = (SELECT hiring_manager_id FROM demand WHERE id = ?)";
+			template.update(query5,employee.getDemand_id());
+			
 		}
 		catch(Exception e)
 		{
@@ -91,7 +116,7 @@ public class EmployeeDaoImpl implements EmployeeDao{
 	 * 2) Increment the version + 1
 	 * 3) Get Email Address of the employee
 	 * 4) update version in employee_constant table
-	 * 5) Insert new obtained data into the employee editable table with key as ( "Email + version ")
+	 * 5) Insert new obtained data into the employee editable table with key as ( " Email + version ")
 	 * 6) Update skills in skill table
 	 * 7) 
 	 * 
@@ -100,6 +125,7 @@ public class EmployeeDaoImpl implements EmployeeDao{
 	public boolean updateEmployee(int id , Employee employee) {
 				
 		try {
+			
 			String query = "SELECT version FROM employee WHERE id = ?";
 			int version = template.queryForObject(query, new Object[] {id}, Integer.class);
 			version++;
@@ -107,14 +133,26 @@ public class EmployeeDaoImpl implements EmployeeDao{
 			String query1 = "SELECT email FROM employee WHERE id = ?";
 			String email = template.queryForObject(query1, new Object[] {id}, String.class);
 			
-			String query2 = "UPDATE `employee_constant` SET `version`= ? WHERE `id` = ?" ;
-			template.update(query2, version , id);
+			String query2 = "SELECT demand_id FROM employee WHERE id = ?";
+			int demand_id = template.queryForObject(query2, new Object[] {id}, Integer.class);
 			
-			String query3 = "INSERT INTO `employee_editable`(`emailversion`, `experience`, `phone_number`, `current_address`, `pincode`, `BGC`, `designation`, `bank_ac_no`, `demand_id`) VALUES (? ,? ,? , ? ,? ,? ,? ,? , ?  )";
-			template.update(query3, email.concat(String.valueOf(version)), employee.getExperience(), employee.getPhone_number(), employee.getCurrent_address() , employee.getC_pincode(), employee.getBGC(), employee.getDesignation(), employee.getBank_ac_no() , employee.getDemand_id());
+			String query3 = "UPDATE `employee_constant` SET `version`= ? WHERE `id` = ?" ;
+			template.update(query3, version , id);
 			
-			String query4 = "UPDATE `skill` SET `skill_1`= ? , `skill_2`=? , `skill_3`=?  WHERE `pan_number` = ?";
-			template.update(query4, employee.getSkill_1(), employee.getSkill_2(), employee.getSkill_3(),employee.getPan_number());
+			String query4 = "INSERT INTO `employee_editable`(`emailversion`, `experience`, `phone_number`, `current_address`, `pincode`, `BGC`, `designation`, `bank_ac_no`, `demand_id`) VALUES (? ,? ,? , ? ,? ,? ,? ,? , ?  )";
+			template.update(query4, email.concat(String.valueOf(version)), employee.getExperience(), employee.getPhone_number(), employee.getCurrent_address() , employee.getC_pincode(), employee.getBGC(), employee.getDesignation(), employee.getBank_ac_no() , employee.getDemand_id());
+			
+			String query5 = "UPDATE `skill` SET `skill_1`= ? , `skill_2`=? , `skill_3`=?  WHERE `pan_number` = ?";
+			template.update(query5, employee.getSkill_1(), employee.getSkill_2(), employee.getSkill_3(),employee.getPan_number());
+			
+			// IF Same Demand then dont update employees_assigned
+			if(demand_id != employee.getDemand_id())
+			{
+				//Increase assigned employees count 
+				String query6 = "UPDATE hiring_manager SET employees_assigned = employees_assigned + 1 WHERE id = (SELECT hiring_manager_id FROM demand WHERE id = ?)";
+				template.update(query6,employee.getDemand_id());
+			}
+			
 			
 		}
 		catch(Exception e)
@@ -128,11 +166,12 @@ public class EmployeeDaoImpl implements EmployeeDao{
 	/* (non-Javadoc)
 	 * @see com.accolite.aumanagement.dao.EmployeeDao#deleteEmployee(int)
 	 * 
-	 * Deleting only the Employee Primary Details .
-	 * Secondary Details are still available after deleting
+	 * Soft Delete Employee (i.e) Setting Employee status as false ( " INACTIVE ").
+	 * Secondary Details are still available after deleting.
 	 */
 	@Override
 	public boolean deleteEmployee(int id) {
+		
 		try {
 			String query = "UPDATE `employee_constant` SET status = false WHERE id = ?" ;
 			template.update(query, id);
@@ -145,39 +184,12 @@ public class EmployeeDaoImpl implements EmployeeDao{
 		
 	}
 
-
-
-	public EmployeeDaoImpl(JdbcTemplate template) {
-		super();
-		this.template = template;
-	}
-
-
-
-	@Autowired
-	public EmployeeDaoImpl() {
-		super();
-	}
-
-
-
-	public JdbcTemplate getTemplate() {
-		return template;
-	}
-
-
-
-	public void setTemplate(JdbcTemplate template) {
-		this.template = template;
-	}
-
-
-
 	@Override
 	public List<Integer> getAllEmployeesIds() {
-		String query = "SELECT id from employee_constant ";
 		
 		List<Integer> list;
+		
+		String query = "SELECT id from employee_constant ";
 		
 		list = template.queryForList(query, null,Integer.class);
 		
@@ -185,8 +197,9 @@ public class EmployeeDaoImpl implements EmployeeDao{
 		{
 			throw new CustomException("No employees are present ");
 		}
-		else
-		return list;
+		else {
+			return list;
+		}
 	}
 	
 	

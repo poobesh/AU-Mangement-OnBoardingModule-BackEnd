@@ -31,7 +31,6 @@ public class EmployeeServiceImpl implements EmployeeService {
 		
 	}
 	
-
 	@Override
 	public boolean putRequest(int id, Employee t) {
 		return employeeDao.updateEmployee(id , t);
@@ -54,10 +53,5 @@ public class EmployeeServiceImpl implements EmployeeService {
 	public List<Integer> getRequestForIds() {
 		return employeeDao.getAllEmployeesIds();
 	}
-
-	
-
-	
-	
 
 }

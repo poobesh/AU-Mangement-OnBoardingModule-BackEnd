@@ -5,6 +5,7 @@ public class Trends {
 	String company_name;
 	int required_employee_count;
 	int year;
+	
 	public String getCompany_name() {
 		return company_name;
 	}

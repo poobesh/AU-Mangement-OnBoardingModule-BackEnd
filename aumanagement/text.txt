@@ -1,0 +1,7 @@
+File resource = new ClassPathResource(
+      "data/employees.dat").getFile();
+    String employees = new String(
+      Files.readAllBytes(resource.toPath()));
+    assertEquals(
+      "Joe Employee,Jan Employee,James T. Employee", 
+      employees);

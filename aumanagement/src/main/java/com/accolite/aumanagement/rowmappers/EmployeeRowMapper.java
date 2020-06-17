@@ -1,16 +1,19 @@
-package com.accolite.aumanagement.model;
+package com.accolite.aumanagement.rowmappers;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import org.springframework.jdbc.core.RowMapper;
 
+import com.accolite.aumanagement.model.Employee;
 
 public class EmployeeRowMapper implements RowMapper<Employee> {
 
 	@Override
 	public Employee mapRow(ResultSet rs, int rowNo)  {
+		
 		Employee employee = new Employee();
+		
 		try {
 			employee.setId(rs.getInt("id"));
 		
@@ -42,9 +45,12 @@ public class EmployeeRowMapper implements RowMapper<Employee> {
 			employee.setDemand_id(rs.getInt("demand_id"));
 			
 			return employee;
-		} catch (SQLException e) {
+			
+		} 
+		catch (SQLException e) {
 			return null;
 		}
 	}
 
 }
+

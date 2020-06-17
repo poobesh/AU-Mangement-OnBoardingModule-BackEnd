@@ -12,7 +12,6 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 @ControllerAdvice
 public class DefaultExceptionHandler extends ResponseEntityExceptionHandler{
 	
-	
 	@ExceptionHandler(CustomException.class)
 	public final ResponseEntity<ErrorMessage> handleNotFoundException(CustomException ex, WebRequest request) {
 		 ErrorMessage response = new ErrorMessage(new Date(), ex.getMessage(),
